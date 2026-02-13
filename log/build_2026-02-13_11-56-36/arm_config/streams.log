@@ -1,0 +1,48 @@
+[0.040s] Invoking command in '/home/lukevizzini/arm_new/arm_code/build/arm_config': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lukevizzini/arm_new/arm_code/src/config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lukevizzini/arm_new/arm_code/install/arm_config
+[0.791s] -- The C compiler identification is GNU 11.4.0
+[2.117s] -- The CXX compiler identification is GNU 11.4.0
+[2.948s] -- Detecting C compiler ABI info
+[3.275s] -- Detecting C compiler ABI info - done
+[3.284s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.285s] -- Detecting C compile features
+[3.287s] -- Detecting C compile features - done
+[3.293s] -- Detecting CXX compiler ABI info
+[3.607s] -- Detecting CXX compiler ABI info - done
+[3.616s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.617s] -- Detecting CXX compile features
+[3.617s] -- Detecting CXX compile features - done
+[3.672s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.880s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[3.973s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[4.147s] -- Configuring done
+[4.154s] -- Generating done
+[4.157s] -- Build files have been written to: /home/lukevizzini/arm_new/arm_code/build/arm_config
+[4.165s] Invoked command in '/home/lukevizzini/arm_new/arm_code/build/arm_config' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lukevizzini/arm_new/arm_code/src/config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lukevizzini/arm_new/arm_code/install/arm_config
+[4.169s] Invoking command in '/home/lukevizzini/arm_new/arm_code/build/arm_config': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/arm_new/arm_code/build/arm_config -- -j8 -l8
+[4.217s] Invoked command in '/home/lukevizzini/arm_new/arm_code/build/arm_config' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/arm_new/arm_code/build/arm_config -- -j8 -l8
+[4.238s] Invoking command in '/home/lukevizzini/arm_new/arm_code/build/arm_config': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/arm_new/arm_code/build/arm_config
+[4.249s] -- Install configuration: ""
+[4.249s] -- Execute custom install script
+[4.251s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/config/four_dof_arm.srdf
+[4.262s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/config/initial_positions.yaml
+[4.275s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/config/joint_limits.yaml
+[4.288s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/config/kinematics.yaml
+[4.301s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/config/moveit_controllers.yaml
+[4.314s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/config/ompl_planning.yaml
+[4.330s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/config/ros2_controllers.yaml
+[4.343s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/ament_index/resource_index/package_run_dependencies/arm_config
+[4.356s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/ament_index/resource_index/parent_prefix_path/arm_config
+[4.371s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/environment/ament_prefix_path.sh
+[4.385s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/environment/ament_prefix_path.dsv
+[4.398s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/environment/path.sh
+[4.414s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/environment/path.dsv
+[4.429s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/local_setup.bash
+[4.440s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/local_setup.sh
+[4.455s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/local_setup.zsh
+[4.466s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/local_setup.dsv
+[4.479s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/package.dsv
+[4.494s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/ament_index/resource_index/packages/arm_config
+[4.509s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/cmake/arm_configConfig.cmake
+[4.521s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/cmake/arm_configConfig-version.cmake
+[4.533s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_config/share/arm_config/package.xml
+[4.550s] Invoked command in '/home/lukevizzini/arm_new/arm_code/build/arm_config' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/arm_new/arm_code/build/arm_config

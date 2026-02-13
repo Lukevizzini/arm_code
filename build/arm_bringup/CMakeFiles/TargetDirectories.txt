@@ -1,0 +1,9 @@
+/home/lukevizzini/arm_new/arm_code/build/arm_bringup/CMakeFiles/uninstall.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_bringup/CMakeFiles/arm_bringup_uninstall.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_bringup/CMakeFiles/test.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_bringup/CMakeFiles/edit_cache.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_bringup/CMakeFiles/rebuild_cache.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_bringup/CMakeFiles/list_install_components.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_bringup/CMakeFiles/install.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_bringup/CMakeFiles/install/local.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_bringup/CMakeFiles/install/strip.dir

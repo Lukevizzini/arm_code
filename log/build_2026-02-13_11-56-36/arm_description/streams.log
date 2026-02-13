@@ -1,0 +1,50 @@
+[0.163s] Invoking command in '/home/lukevizzini/arm_new/arm_code/build/arm_description': AMENT_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:/opt/ros/humble /usr/bin/cmake /home/lukevizzini/arm_new/arm_code/src/description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lukevizzini/arm_new/arm_code/install/arm_description
+[0.564s] -- The C compiler identification is GNU 11.4.0
+[1.909s] -- The CXX compiler identification is GNU 11.4.0
+[2.813s] -- Detecting C compiler ABI info
+[3.094s] -- Detecting C compiler ABI info - done
+[3.103s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.104s] -- Detecting C compile features
+[3.104s] -- Detecting C compile features - done
+[3.107s] -- Detecting CXX compiler ABI info
+[3.529s] -- Detecting CXX compiler ABI info - done
+[3.544s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.545s] -- Detecting CXX compile features
+[3.545s] -- Detecting CXX compile features - done
+[3.549s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.731s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[3.866s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.997s] -- Configuring done
+[4.004s] -- Generating done
+[4.007s] -- Build files have been written to: /home/lukevizzini/arm_new/arm_code/build/arm_description
+[4.013s] Invoked command in '/home/lukevizzini/arm_new/arm_code/build/arm_description' returned '0': AMENT_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:/opt/ros/humble /usr/bin/cmake /home/lukevizzini/arm_new/arm_code/src/description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lukevizzini/arm_new/arm_code/install/arm_description
+[4.016s] Invoking command in '/home/lukevizzini/arm_new/arm_code/build/arm_description': AMENT_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/arm_new/arm_code/build/arm_description -- -j8 -l8
+[4.066s] Invoked command in '/home/lukevizzini/arm_new/arm_code/build/arm_description' returned '0': AMENT_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/arm_new/arm_code/build/arm_description -- -j8 -l8
+[4.069s] Invoking command in '/home/lukevizzini/arm_new/arm_code/build/arm_description': AMENT_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/arm_new/arm_code/build/arm_description
+[4.081s] -- Install configuration: ""
+[4.082s] -- Execute custom install script
+[4.083s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/urdf/four_dof_arm.urdf.xacro
+[4.096s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/urdf/ros2_control.xacro
+[4.107s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/Link.STL
+[4.116s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/base_placeholder.stl
+[4.127s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/ee_placeholder.stl
+[4.140s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/link1_placeholder.stl
+[4.151s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/link2_placeholder.stl
+[4.162s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/link3_placeholder.stl
+[4.179s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/link4_placeholder.stl
+[4.196s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/ament_index/resource_index/package_run_dependencies/arm_description
+[4.208s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/ament_index/resource_index/parent_prefix_path/arm_description
+[4.219s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/environment/ament_prefix_path.sh
+[4.229s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/environment/ament_prefix_path.dsv
+[4.241s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/environment/path.sh
+[4.253s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/environment/path.dsv
+[4.263s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/local_setup.bash
+[4.275s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/local_setup.sh
+[4.287s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/local_setup.zsh
+[4.299s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/local_setup.dsv
+[4.312s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/package.dsv
+[4.320s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/ament_index/resource_index/packages/arm_description
+[4.332s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/cmake/arm_descriptionConfig.cmake
+[4.342s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/cmake/arm_descriptionConfig-version.cmake
+[4.354s] -- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/package.xml
+[4.367s] Invoked command in '/home/lukevizzini/arm_new/arm_code/build/arm_description' returned '0': AMENT_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lukevizzini/arm_new/arm_code/install/arm_config:/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/arm_new/arm_code/build/arm_description

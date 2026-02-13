@@ -1,0 +1,9 @@
+/home/lukevizzini/arm_new/arm_code/build/arm_config/CMakeFiles/uninstall.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_config/CMakeFiles/arm_config_uninstall.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_config/CMakeFiles/test.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_config/CMakeFiles/edit_cache.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_config/CMakeFiles/rebuild_cache.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_config/CMakeFiles/list_install_components.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_config/CMakeFiles/install.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_config/CMakeFiles/install/local.dir
+/home/lukevizzini/arm_new/arm_code/build/arm_config/CMakeFiles/install/strip.dir

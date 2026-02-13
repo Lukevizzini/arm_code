@@ -1,0 +1,23 @@
+running develop
+running egg_info
+creating arm_teleop.egg-info
+writing arm_teleop.egg-info/PKG-INFO
+writing dependency_links to arm_teleop.egg-info/dependency_links.txt
+writing entry points to arm_teleop.egg-info/entry_points.txt
+writing requirements to arm_teleop.egg-info/requires.txt
+writing top-level names to arm_teleop.egg-info/top_level.txt
+writing manifest file 'arm_teleop.egg-info/SOURCES.txt'
+reading manifest file 'arm_teleop.egg-info/SOURCES.txt'
+writing manifest file 'arm_teleop.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/lukevizzini/arm_new/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm-teleop.egg-link (link to .)
+Installing joy_to_trajectory script to /home/lukevizzini/arm_new/arm_code/install/arm_teleop/lib/arm_teleop
+Installing keyboard_to_joy script to /home/lukevizzini/arm_new/arm_code/install/arm_teleop/lib/arm_teleop
+
+Installed /home/lukevizzini/arm_new/arm_code/build/arm_teleop
+running symlink_data
+creating /home/lukevizzini/arm_new/arm_code/install/arm_teleop/share/ament_index
+creating /home/lukevizzini/arm_new/arm_code/install/arm_teleop/share/ament_index/resource_index
+creating /home/lukevizzini/arm_new/arm_code/install/arm_teleop/share/ament_index/resource_index/packages
+symbolically linking /home/lukevizzini/arm_new/arm_code/build/arm_teleop/resource/arm_teleop -> /home/lukevizzini/arm_new/arm_code/install/arm_teleop/share/ament_index/resource_index/packages
+symbolically linking /home/lukevizzini/arm_new/arm_code/build/arm_teleop/package.xml -> /home/lukevizzini/arm_new/arm_code/install/arm_teleop/share/arm_teleop

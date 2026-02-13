@@ -1,0 +1,4 @@
+[console_scripts]
+joy_to_trajectory = arm_teleop.joy_to_trajectory:main
+keyboard_to_joy = arm_teleop.keyboard_to_joy:main
+

@@ -1,0 +1,6 @@
+Invoking command in '/home/lukevizzini/arm_new/arm_code/build/arm_config': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lukevizzini/arm_new/arm_code/src/config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lukevizzini/arm_new/arm_code/install/arm_config
+Invoked command in '/home/lukevizzini/arm_new/arm_code/build/arm_config' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lukevizzini/arm_new/arm_code/src/config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lukevizzini/arm_new/arm_code/install/arm_config
+Invoking command in '/home/lukevizzini/arm_new/arm_code/build/arm_config': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/arm_new/arm_code/build/arm_config -- -j8 -l8
+Invoked command in '/home/lukevizzini/arm_new/arm_code/build/arm_config' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/arm_new/arm_code/build/arm_config -- -j8 -l8
+Invoking command in '/home/lukevizzini/arm_new/arm_code/build/arm_config': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/arm_new/arm_code/build/arm_config
+Invoked command in '/home/lukevizzini/arm_new/arm_code/build/arm_config' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/arm_new/arm_code/build/arm_config
