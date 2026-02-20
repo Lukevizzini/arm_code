@@ -53,8 +53,8 @@ def generate_launch_description():
 
             Node(
                 package="arm_pwm_bridge",
-                executable="joint_traj_to_rc_override",
-                name="joint_traj_to_rc_override",
+                executable="joint_traj_to_pwm",
+                name="joint_traj_to_pwm",
                 output="screen",
                 parameters=[
                     {
