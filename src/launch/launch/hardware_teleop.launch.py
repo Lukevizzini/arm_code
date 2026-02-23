@@ -10,8 +10,7 @@ def generate_launch_description():
     controllers_file = LaunchConfiguration("controllers_file")
     use_sim_time = LaunchConfiguration("use_sim_time")
     start_pwm_bridge = LaunchConfiguration("start_pwm_bridge")
-    pwm_channels = LaunchConfiguration("pwm_channels")
-    command_service = LaunchConfiguration("command_service")
+    rc_channels = LaunchConfiguration("rc_channels")
 
     bringup_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -32,9 +31,7 @@ def generate_launch_description():
             PathJoinSubstitution([FindPackageShare("arm_pwm_bridge"), "launch", "pwm_bridge.launch.py"])
         ),
         launch_arguments={
-            "pwm_channels": pwm_channels,
-            "command_service": command_service,
-            "publish_joint_states": "false",
+            "rc_channels": rc_channels,
         }.items(),
         condition=IfCondition(start_pwm_bridge),
     )
@@ -54,8 +51,7 @@ def generate_launch_description():
                 default_value="true",
                 description="Start the JointTrajectory->PWM bridge alongside teleop",
             ),
-            DeclareLaunchArgument("pwm_channels", default_value="[9,10,11,12]"),
-            DeclareLaunchArgument("command_service", default_value="/mavros/cmd/command"),
+            DeclareLaunchArgument("rc_channels", default_value="[9,10,11,12,13]"),
             bringup_launch,
             teleop_launch,
             pwm_bridge_launch,

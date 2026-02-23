@@ -19,7 +19,7 @@ def generate_launch_description():
         [
             DeclareLaunchArgument(
                 "trajectory_topic",
-                default_value="/arm_controller/joint_trajectory"
+                default_value="arm_controller/joint_trajectory"
             ),
             DeclareLaunchArgument(
                 "joint_names",
@@ -27,7 +27,7 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 "rc_channels",
-                default_value="[11,12,13,14,15]",
+                default_value="[9,10,11,12,13]",
                 description="RC override channels"
             ),
             DeclareLaunchArgument(
