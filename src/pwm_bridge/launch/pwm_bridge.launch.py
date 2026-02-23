@@ -9,6 +9,7 @@ def generate_launch_description():
     trajectory_topic = LaunchConfiguration("trajectory_topic")
     joint_names = LaunchConfiguration("joint_names")
     rc_channels = LaunchConfiguration("rc_channels")
+    rc_override_topic = LaunchConfiguration("rc_override_topic")
     angle_min_rad = LaunchConfiguration("angle_min_rad")
     angle_max_rad = LaunchConfiguration("angle_max_rad")
     pulse_min_us = LaunchConfiguration("pulse_min_us")
@@ -27,8 +28,13 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 "rc_channels",
-                default_value="[9,10,11,12,13]",
+                default_value="[12,13,14,15,16]",
                 description="RC override channels"
+            ),
+            DeclareLaunchArgument(
+                "rc_override_topic",
+                default_value="/mavros/rc/override",
+                description="RC override output topic"
             ),
             DeclareLaunchArgument(
                 "angle_min_rad",
@@ -61,6 +67,7 @@ def generate_launch_description():
                         "trajectory_topic": trajectory_topic,
                         "joint_names": joint_names,
                         "rc_channels": rc_channels,
+                        "rc_override_topic": rc_override_topic,
                         "angle_min_rad": angle_min_rad,
                         "angle_max_rad": angle_max_rad,
                         "pulse_min_us": ParameterValue(pulse_min_us, value_type=float),

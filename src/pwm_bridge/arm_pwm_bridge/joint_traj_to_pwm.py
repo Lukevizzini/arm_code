@@ -21,7 +21,8 @@ class JointTrajectoryToPWM(Node):
         # ===== PARAMETERS =====
         self.declare_parameter("trajectory_topic", "arm_controller/joint_trajectory")
         self.declare_parameter("joint_names", ["joint1", "joint2", "joint3", "joint4", "joint5"])
-        self.declare_parameter("rc_channels", [9, 10, 11, 12, 13])
+        self.declare_parameter("rc_channels", [12, 13, 14, 15, 16])
+        self.declare_parameter("rc_override_topic", "/mavros/rc/override")
         self.declare_parameter("pulse_min_us", 700.0)
         self.declare_parameter("pulse_max_us", 2300.0)
         self.declare_parameter("angle_min_rad", [-2.6, -2.0, -2.6, -2.6, -1.5])
@@ -32,6 +33,7 @@ class JointTrajectoryToPWM(Node):
         self.trajectory_topic: str = self.get_parameter("trajectory_topic").value
         self.joint_names: List[str] = list(self.get_parameter("joint_names").value)
         self.rc_channels: List[int] = list(self.get_parameter("rc_channels").value)
+        self.rc_override_topic: str = self.get_parameter("rc_override_topic").value
         self.pulse_min_us: float = self.get_parameter("pulse_min_us").value
         self.pulse_max_us: float = self.get_parameter("pulse_max_us").value
         self.angle_min_rad: List[float] = list(self.get_parameter("angle_min_rad").value)
@@ -74,7 +76,7 @@ class JointTrajectoryToPWM(Node):
         # ===== RC Override Publisher =====
         self.rc_pub = self.create_publisher(
             OverrideRCIn,
-            "mavros/rc/override",
+            self.rc_override_topic,
             10
         )
 
@@ -88,15 +90,19 @@ class JointTrajectoryToPWM(Node):
         }
 
         # Subscription
-        self.create_subscription(
+        self.traj_sub = self.create_subscription(
             JointTrajectory,
             self.trajectory_topic,
             self._traj_cb,
             10
         )
 
+        self._rc_subscriber_warned = False
+        self._rc_subscriber_connected = False
+        self.subscriber_check_timer = self.create_timer(1.0, self._check_rc_subscribers)
+
         self.get_logger().info(
-            f"Listening on {self.trajectory_topic} -> RC Override {self.rc_channels}"
+            f"Listening on {self.trajectory_topic} -> {self.rc_override_topic} channels {self.rc_channels}"
         )
 
         # Apply initial positions
@@ -177,6 +183,23 @@ class JointTrajectoryToPWM(Node):
 
         self.rc_pub.publish(self.rc_msg)
         self.get_logger().info("Initial RC override positions applied")
+
+    def _check_rc_subscribers(self):
+        subscription_count = self.rc_pub.get_subscription_count()
+        if subscription_count > 0:
+            if not self._rc_subscriber_connected:
+                self.get_logger().info(
+                    f"RC override topic has {subscription_count} subscriber(s)."
+                )
+                self._rc_subscriber_connected = True
+            return
+
+        if not self._rc_subscriber_warned:
+            self.get_logger().warn(
+                f"No subscribers on {self.rc_override_topic}; RC overrides will not reach the FCU. "
+                "Start MAVROS or verify the topic namespace."
+            )
+            self._rc_subscriber_warned = True
 
 
 def main(args=None):

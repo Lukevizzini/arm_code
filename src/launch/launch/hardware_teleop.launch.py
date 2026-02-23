@@ -51,7 +51,7 @@ def generate_launch_description():
                 default_value="true",
                 description="Start the JointTrajectory->PWM bridge alongside teleop",
             ),
-            DeclareLaunchArgument("rc_channels", default_value="[9,10,11,12,13]"),
+            DeclareLaunchArgument("rc_channels", default_value="[12,13,14,15,16]"),
             bringup_launch,
             teleop_launch,
             pwm_bridge_launch,

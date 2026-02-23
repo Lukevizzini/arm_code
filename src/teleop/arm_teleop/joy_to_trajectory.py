@@ -55,7 +55,7 @@ class JoyToTrajectory(Node):
             )
 
         self.publisher = self.create_publisher(JointTrajectory, "arm_controller/joint_trajectory", 10)
-        self.create_subscription(Joy, "joy", self._joy_cb, 10)
+        self.joy_sub = self.create_subscription(Joy, "joy", self._joy_cb, 10)
         self.timer = self.create_timer(self.dt, self._publish)
 
         self.get_logger().info(
