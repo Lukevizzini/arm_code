@@ -39,6 +39,15 @@ class JoyToTrajectory(Node):
         self.reset_button_index: int = int(self.get_parameter("reset_button_index").value)
         self.initial_positions: List[float] = list(self.get_parameter("initial_positions").value)
 
+        if self.publish_rate_hz <= 0.0:
+            raise ValueError("publish_rate_hz must be > 0")
+
+        joint_count = len(self.joint_names)
+        if len(self.initial_positions) < joint_count:
+            self.initial_positions.extend([0.0] * (joint_count - len(self.initial_positions)))
+        else:
+            self.initial_positions = self.initial_positions[:joint_count]
+
         self.dt = 1.0 / self.publish_rate_hz
         # Default to dt when time_from_start <= 0 for snappier response; otherwise respect the parameter.
         self.time_from_start = self.dt if configured_time_from_start <= 0 else configured_time_from_start

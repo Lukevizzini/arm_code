@@ -1,10 +1,9 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, GroupAction, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
-from launch_ros.actions import Node, PushRosNamespace
+from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
-from launch_ros.actions import PushRosNamespace
-from launch.launch_description_sources import XMLLaunchDescriptionSource
 from launch_ros.substitutions import FindPackageShare
 
 
@@ -13,24 +12,18 @@ def generate_launch_description():
     joint_names = LaunchConfiguration("joint_names")
     rc_channels = LaunchConfiguration("rc_channels")
     rc_override_topic = LaunchConfiguration("rc_override_topic")
+    require_start_trigger = LaunchConfiguration("require_start_trigger")
+    start_trigger_topic = LaunchConfiguration("start_trigger_topic")
     angle_min_rad = LaunchConfiguration("angle_min_rad")
     angle_max_rad = LaunchConfiguration("angle_max_rad")
     pulse_min_us = LaunchConfiguration("pulse_min_us")
     pulse_max_us = LaunchConfiguration("pulse_max_us")
     initial_positions_rad = LaunchConfiguration("initial_positions_rad")
+    start_mavros = LaunchConfiguration("start_mavros")
+    fcu_url = LaunchConfiguration("fcu_url")
+    gcs_url = LaunchConfiguration("gcs_url")
+    mavros_pluginlists_yaml = LaunchConfiguration("mavros_pluginlists_yaml")
 
-    namespace = ""
-
-    mavros = GroupAction(
-        actions=[PushRosNamespace(namespace),
-                IncludeLaunchDescription(XMLLaunchDescriptionSource(
-                    PathJoinSubstitution([FindPackageShare('pwm_bridge'),
-                                          'arm_pwm_bridge',
-                                          'mavros.launch'])
-                ), launch_arguments={'fcu_url': 'udp://0.0.0.0:14550@'}.items()
-            )
-        ]
-    )
     return LaunchDescription(
         [
             DeclareLaunchArgument(
@@ -48,8 +41,18 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 "rc_override_topic",
-                default_value="/mavros/rc/override",
+                default_value="/uas1/mavros/rc/override",
                 description="RC override output topic"
+            ),
+            DeclareLaunchArgument(
+                "require_start_trigger",
+                default_value="false",
+                description="Require Bool(true) on start_trigger_topic before publishing RC overrides"
+            ),
+            DeclareLaunchArgument(
+                "start_trigger_topic",
+                default_value="/arm_pwm_bridge/start",
+                description="Bool topic used to arm/disarm RC override publishing"
             ),
             DeclareLaunchArgument(
                 "angle_min_rad",
@@ -71,8 +74,43 @@ def generate_launch_description():
                 "initial_positions_rad",
                 default_value="[0.0,0.0,0.0,0.0,0.0]"
             ),
-            
-            mavros,
+            DeclareLaunchArgument(
+                "start_mavros",
+                default_value="false",
+                description="Start MAVROS in the same launch"
+            ),
+            DeclareLaunchArgument(
+                "fcu_url",
+                default_value="udp://:14550@",
+                description="MAVROS FCU endpoint URL"
+            ),
+            DeclareLaunchArgument(
+                "gcs_url",
+                default_value="",
+                description="Optional MAVROS GCS forward URL"
+            ),
+            DeclareLaunchArgument(
+                "mavros_pluginlists_yaml",
+                default_value=PathJoinSubstitution(
+                    [FindPackageShare("arm_pwm_bridge"), "config", "mavros_pluginlists.yaml"]
+                ),
+                description="MAVROS plugin allow/deny list YAML"
+            ),
+
+            Node(
+                package="mavros",
+                executable="mavros_node",
+                name="mavros_node",
+                output="screen",
+                parameters=[
+                    mavros_pluginlists_yaml,
+                    {
+                        "fcu_url": fcu_url,
+                        "gcs_url": gcs_url,
+                    }
+                ],
+                condition=IfCondition(start_mavros),
+            ),
 
             Node(
                 package="arm_pwm_bridge",
@@ -85,6 +123,8 @@ def generate_launch_description():
                         "joint_names": joint_names,
                         "rc_channels": rc_channels,
                         "rc_override_topic": rc_override_topic,
+                        "require_start_trigger": ParameterValue(require_start_trigger, value_type=bool),
+                        "start_trigger_topic": start_trigger_topic,
                         "angle_min_rad": angle_min_rad,
                         "angle_max_rad": angle_max_rad,
                         "pulse_min_us": ParameterValue(pulse_min_us, value_type=float),

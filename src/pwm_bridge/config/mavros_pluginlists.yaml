@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    plugin_allowlist:
+      - sys_status
+      - sys_time
+      - command
+      - param
+      - rc_io
+    plugin_denylist: []

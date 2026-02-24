@@ -36,6 +36,8 @@ class KeyboardToJoy(Node):
         self.axis_count = int(self.get_parameter("axis_count").value)
         self.button_count = int(self.get_parameter("button_count").value)
         rate = float(self.get_parameter("repeat_rate_hz").value)
+        if rate <= 0.0:
+            raise ValueError("repeat_rate_hz must be > 0")
 
         self.publisher = self.create_publisher(Joy, "joy", 10)
         self.timer = self.create_timer(1.0 / rate, self._publish)

@@ -4,6 +4,7 @@ import rclpy
 from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory
 from mavros_msgs.msg import OverrideRCIn
+from std_msgs.msg import Bool
 
 
 def clamp(value: float, lower: float, upper: float) -> float:
@@ -22,7 +23,9 @@ class JointTrajectoryToPWM(Node):
         self.declare_parameter("trajectory_topic", "arm_controller/joint_trajectory")
         self.declare_parameter("joint_names", ["joint1", "joint2", "joint3", "joint4", "joint5"])
         self.declare_parameter("rc_channels", [12, 13, 14, 15, 16])
-        self.declare_parameter("rc_override_topic", "/mavros/rc/override")
+        self.declare_parameter("rc_override_topic", "/uas1/mavros/rc/override")
+        self.declare_parameter("require_start_trigger", False)
+        self.declare_parameter("start_trigger_topic", "/arm_pwm_bridge/start")
         self.declare_parameter("pulse_min_us", 700.0)
         self.declare_parameter("pulse_max_us", 2300.0)
         self.declare_parameter("angle_min_rad", [-2.6, -2.0, -2.6, -2.6, -1.5])
@@ -34,11 +37,14 @@ class JointTrajectoryToPWM(Node):
         self.joint_names: List[str] = list(self.get_parameter("joint_names").value)
         self.rc_channels: List[int] = list(self.get_parameter("rc_channels").value)
         self.rc_override_topic: str = self.get_parameter("rc_override_topic").value
+        self.require_start_trigger: bool = bool(self.get_parameter("require_start_trigger").value)
+        self.start_trigger_topic: str = self.get_parameter("start_trigger_topic").value
         self.pulse_min_us: float = self.get_parameter("pulse_min_us").value
         self.pulse_max_us: float = self.get_parameter("pulse_max_us").value
         self.angle_min_rad: List[float] = list(self.get_parameter("angle_min_rad").value)
         self.angle_max_rad: List[float] = list(self.get_parameter("angle_max_rad").value)
         self.initial_positions_rad: List[float] = list(self.get_parameter("initial_positions_rad").value)
+        self._sending_enabled = not self.require_start_trigger
 
         if self.pulse_min_us > self.pulse_max_us:
             self.get_logger().warn(
@@ -96,6 +102,14 @@ class JointTrajectoryToPWM(Node):
             self._traj_cb,
             10
         )
+        self.start_trigger_sub = None
+        if self.require_start_trigger:
+            self.start_trigger_sub = self.create_subscription(
+                Bool,
+                self.start_trigger_topic,
+                self._start_trigger_cb,
+                10
+            )
 
         self._rc_subscriber_warned = False
         self._rc_subscriber_connected = False
@@ -104,9 +118,16 @@ class JointTrajectoryToPWM(Node):
         self.get_logger().info(
             f"Listening on {self.trajectory_topic} -> {self.rc_override_topic} channels {self.rc_channels}"
         )
+        if self.require_start_trigger:
+            self.get_logger().info(
+                f"Start trigger enabled; waiting for Bool(true) on {self.start_trigger_topic} before publishing RC overrides."
+            )
 
         # Apply initial positions
-        self._write_positions(self._last_positions)
+        if self._sending_enabled:
+            self._write_positions(self._last_positions)
+        else:
+            self.get_logger().info("Initial RC positions armed but not published until start trigger is received.")
 
     # ==========================================================
     # Joint Trajectory Callback
@@ -114,6 +135,8 @@ class JointTrajectoryToPWM(Node):
 
     def _traj_cb(self, msg: JointTrajectory):
         if not msg.points:
+            return
+        if not self._sending_enabled:
             return
 
         point = msg.points[-1]
@@ -200,6 +223,17 @@ class JointTrajectoryToPWM(Node):
                 "Start MAVROS or verify the topic namespace."
             )
             self._rc_subscriber_warned = True
+
+    def _start_trigger_cb(self, msg: Bool):
+        if msg.data and not self._sending_enabled:
+            self._sending_enabled = True
+            self.get_logger().info("Start trigger received. RC override publishing enabled.")
+            self._write_positions(self._last_positions)
+            return
+
+        if not msg.data and self._sending_enabled:
+            self._sending_enabled = False
+            self.get_logger().warn("Start trigger set to false. RC override publishing paused.")
 
 
 def main(args=None):
