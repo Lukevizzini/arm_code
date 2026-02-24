@@ -1,8 +1,11 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
-from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import Node
+from launch.actions import DeclareLaunchArgument, GroupAction, IncludeLaunchDescription
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch_ros.actions import Node, PushRosNamespace
 from launch_ros.parameter_descriptions import ParameterValue
+from launch_ros.actions import PushRosNamespace
+from launch.launch_description_sources import XMLLaunchDescriptionSource
+from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
@@ -16,6 +19,18 @@ def generate_launch_description():
     pulse_max_us = LaunchConfiguration("pulse_max_us")
     initial_positions_rad = LaunchConfiguration("initial_positions_rad")
 
+    namespace = ""
+
+    mavros = GroupAction(
+        actions=[PushRosNamespace(namespace),
+                IncludeLaunchDescription(XMLLaunchDescriptionSource(
+                    PathJoinSubstitution([FindPackageShare('pwm_bridge'),
+                                          'arm_pwm_bridge',
+                                          'mavros.launch'])
+                ), launch_arguments={'fcu_url': 'udp://0.0.0.0:14550@'}.items()
+            )
+        ]
+    )
     return LaunchDescription(
         [
             DeclareLaunchArgument(
@@ -56,6 +71,8 @@ def generate_launch_description():
                 "initial_positions_rad",
                 default_value="[0.0,0.0,0.0,0.0,0.0]"
             ),
+            
+            mavros,
 
             Node(
                 package="arm_pwm_bridge",
