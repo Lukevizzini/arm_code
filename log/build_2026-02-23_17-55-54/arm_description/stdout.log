@@ -1,0 +1,26 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/urdf/four_dof_arm.urdf.xacro
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/urdf/ros2_control.xacro
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/Link.STL
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/base_placeholder.stl
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/ee_placeholder.stl
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/link1_placeholder.stl
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/link2_placeholder.stl
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/link3_placeholder.stl
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/meshes/link4_placeholder.stl
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/ament_index/resource_index/package_run_dependencies/arm_description
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/ament_index/resource_index/parent_prefix_path/arm_description
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/environment/path.sh
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/environment/path.dsv
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/local_setup.bash
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/local_setup.sh
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/local_setup.zsh
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/local_setup.dsv
+-- Symlinking: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/package.dsv
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/ament_index/resource_index/packages/arm_description
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/cmake/arm_descriptionConfig.cmake
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/cmake/arm_descriptionConfig-version.cmake
+-- Up-to-date symlink: /home/lukevizzini/arm_new/arm_code/install/arm_description/share/arm_description/package.xml
