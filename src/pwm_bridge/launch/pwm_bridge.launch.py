@@ -24,8 +24,8 @@ def generate_launch_description():
     mavros = GroupAction(
         actions=[PushRosNamespace(namespace),
                 IncludeLaunchDescription(XMLLaunchDescriptionSource(
-                    PathJoinSubstitution([FindPackageShare('pwm_bridge'),
-                                          'arm_pwm_bridge',
+                    PathJoinSubstitution([FindPackageShare('arm_pwm_bridge'),
+                                          'launch',
                                           'mavros.launch'])
                 ), launch_arguments={'fcu_url': 'udp://0.0.0.0:14550@'}.items()
             )
