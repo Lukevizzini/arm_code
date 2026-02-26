@@ -11,6 +11,8 @@ arm_pwm_bridge.egg-info/entry_points.txt
 arm_pwm_bridge.egg-info/requires.txt
 arm_pwm_bridge.egg-info/top_level.txt
 arm_pwm_bridge.egg-info/zip-safe
+launch/apm_config.yaml
+launch/apm_pluginlist.yaml
 launch/mavros.launch
 launch/pwm_bridge.launch.py
 resource/arm_pwm_bridge

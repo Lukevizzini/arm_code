@@ -27,7 +27,7 @@ def generate_launch_description():
                     PathJoinSubstitution([FindPackageShare('arm_pwm_bridge'),
                                           'launch',
                                           'mavros.launch'])
-                ), launch_arguments={'fcu_url': 'udp://0.0.0.0:14550@'}.items()
+                ), launch_arguments={'fcu_url': 'udp://0.0.0.0:14551@'}.items()
             )
         ]
     )
