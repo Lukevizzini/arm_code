@@ -21,6 +21,8 @@ setup(
         "console_scripts": [
             "keyboard_to_joy = arm_teleop.keyboard_to_joy:main",
             "joy_to_trajectory = arm_teleop.joy_to_trajectory:main",
+            "joy_to_servo = arm_teleop.joy_to_servo:main",
+            "keyboard_servo = arm_teleop.keyboard_servo:main",
         ],
     },
 )

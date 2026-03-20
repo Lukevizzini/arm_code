@@ -1,0 +1,37 @@
+running develop
+Removing /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages/arm-pwm-bridge.egg-link (link to .)
+running egg_info
+writing ../../build/arm_pwm_bridge/arm_pwm_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/arm_pwm_bridge/arm_pwm_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/arm_pwm_bridge/arm_pwm_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/arm_pwm_bridge/arm_pwm_bridge.egg-info/requires.txt
+writing top-level names to ../../build/arm_pwm_bridge/arm_pwm_bridge.egg-info/top_level.txt
+reading manifest file '../../build/arm_pwm_bridge/arm_pwm_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../build/arm_pwm_bridge/arm_pwm_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/build
+creating /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/build/lib
+creating /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/build/lib/arm_pwm_bridge
+copying arm_pwm_bridge/joint_traj_to_pwm.py -> /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/build/lib/arm_pwm_bridge
+copying arm_pwm_bridge/__init__.py -> /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/build/lib/arm_pwm_bridge
+running install
+running install_lib
+creating /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages/arm_pwm_bridge
+copying /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/build/lib/arm_pwm_bridge/joint_traj_to_pwm.py -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages/arm_pwm_bridge
+copying /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/build/lib/arm_pwm_bridge/__init__.py -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages/arm_pwm_bridge
+byte-compiling /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages/arm_pwm_bridge/joint_traj_to_pwm.py to joint_traj_to_pwm.cpython-310.pyc
+byte-compiling /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages/arm_pwm_bridge/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/arm_pwm_bridge -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge
+copying README.md -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge
+copying launch/apm_config.yaml -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+copying launch/mavros.launch -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+copying launch/apm_pluginlist.yaml -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+copying launch/pwm_bridge.launch.py -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+running install_egg_info
+Copying ../../build/arm_pwm_bridge/arm_pwm_bridge.egg-info to /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages/arm_pwm_bridge-0.0.1-py3.10.egg-info
+running install_scripts
+Installing joint_traj_to_pwm script to /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/arm_pwm_bridge
+writing list of installed files to '/home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/install.log'

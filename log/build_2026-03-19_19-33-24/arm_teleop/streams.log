@@ -1,0 +1,20 @@
+[0.713s] Invoking command in '/home/lukevizzini/arm_v3/arm_code/build/arm_teleop': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build --no-deps symlink_data
+[0.966s] running develop
+[1.155s] running egg_info
+[1.155s] writing arm_teleop.egg-info/PKG-INFO
+[1.156s] writing dependency_links to arm_teleop.egg-info/dependency_links.txt
+[1.156s] writing entry points to arm_teleop.egg-info/entry_points.txt
+[1.156s] writing requirements to arm_teleop.egg-info/requires.txt
+[1.156s] writing top-level names to arm_teleop.egg-info/top_level.txt
+[1.158s] reading manifest file 'arm_teleop.egg-info/SOURCES.txt'
+[1.159s] writing manifest file 'arm_teleop.egg-info/SOURCES.txt'
+[1.162s] running build_ext
+[1.163s] Creating /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm-teleop.egg-link (link to .)
+[1.164s] Installing joy_to_servo script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+[1.164s] Installing joy_to_trajectory script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+[1.164s] Installing keyboard_servo script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+[1.164s] Installing keyboard_to_joy script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+[1.165s] 
+[1.165s] Installed /home/lukevizzini/arm_v3/arm_code/build/arm_teleop
+[1.165s] running symlink_data
+[1.201s] Invoked command in '/home/lukevizzini/arm_v3/arm_code/build/arm_teleop' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build --no-deps symlink_data

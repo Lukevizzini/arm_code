@@ -6,7 +6,7 @@
   <xacro:include filename="$(find arm_description)/urdf/ros2_control.xacro"/>
 
   <xacro:arg name="controllers_file" default="$(find arm_config)/config/ros2_controllers.yaml"/>
-  <xacro:property name="mesh_dir" value="$(find arm_description)/meshes"/>
+  <xacro:property name="mesh_dir" value="package://arm_description/meshes"/>
   <xacro:property name="controllers_file_path" value="$(arg controllers_file)"/>
 
   <!-- Basic link dimensions (scaled 10x) -->
@@ -15,6 +15,8 @@
   <xacro:property name="link3_length" value="1.27"/>
   <!-- Convert millimeter-based meshes to meters and scale 10x -->
   <xacro:property name="mesh_scale" value="0.01 0.01 0.01"/>
+  <!-- Placeholder meshes are already in metric scale -->
+  <xacro:property name="placeholder_scale" value="1.0 1.0 1.0"/>
 
   <xacro:macro name="default_inertial" params="mass">
     <inertial>
@@ -56,9 +58,9 @@
 
   <link name="link1">
     <visual>
-      <origin xyz="-0.20945 -0.22269 0.03755" rpy="-1.5708 0 0"/> <!-- original mesh offset -->
+      <origin xyz="0 0 -0.635" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/Link.STL" scale="${mesh_scale}"/>
+        <box size="0.10 0.10 1.27"/>
       </geometry>
       <material name="blue">
         <color rgba="0.1 0.4 0.8 1.0"/>
@@ -84,9 +86,9 @@
 
   <link name="link2">
     <visual>
-      <origin xyz="-0.03755 0.20945 -0.22269" rpy="0 0 -1.5708"/> <!-- original mesh offset -->
+      <origin xyz="0.635 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/Link.STL" scale="${mesh_scale}"/>
+        <box size="1.27 0.10 0.10"/>
       </geometry>
       <material name="light_grey">
         <color rgba="0.7 0.7 0.7 1.0"/>
@@ -112,9 +114,9 @@
 
   <link name="link3">
     <visual>
-      <origin xyz="-0.20945 -0.22269 0.03755" rpy="-1.5708 0 0"/> <!-- original mesh offset -->
+      <origin xyz="0 0 -0.635" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/Link.STL" scale="${mesh_scale}"/>
+        <box size="0.10 0.10 1.27"/>
       </geometry>
       <material name="blue">
         <color rgba="0.1 0.4 0.8 1.0"/>

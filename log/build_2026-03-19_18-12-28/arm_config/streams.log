@@ -1,0 +1,29 @@
+[0.046s] Invoking command in '/home/lukevizzini/arm_v3/arm_code/build/arm_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/arm_v3/arm_code/build/arm_config -- -j8 -l8
+[1.053s] Invoked command in '/home/lukevizzini/arm_v3/arm_code/build/arm_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/arm_v3/arm_code/build/arm_config -- -j8 -l8
+[1.073s] Invoking command in '/home/lukevizzini/arm_v3/arm_code/build/arm_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/arm_v3/arm_code/build/arm_config
+[1.087s] -- Install configuration: ""
+[1.088s] -- Execute custom install script
+[1.089s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/config/four_dof_arm.srdf
+[1.089s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/config/initial_positions.yaml
+[1.089s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/config/joint_limits.yaml
+[1.090s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/config/kinematics.yaml
+[1.090s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/config/moveit_controllers.yaml
+[1.090s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/config/moveit_servo.yaml
+[1.091s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/config/ompl_planning.yaml
+[1.091s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/config/ros2_controllers.yaml
+[1.091s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/ament_index/resource_index/package_run_dependencies/arm_config
+[1.092s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/ament_index/resource_index/parent_prefix_path/arm_config
+[1.092s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/environment/ament_prefix_path.sh
+[1.092s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/environment/ament_prefix_path.dsv
+[1.093s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/environment/path.sh
+[1.093s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/environment/path.dsv
+[1.093s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/local_setup.bash
+[1.094s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/local_setup.sh
+[1.094s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/local_setup.zsh
+[1.095s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/local_setup.dsv
+[1.095s] -- Symlinking: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/package.dsv
+[1.116s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/ament_index/resource_index/packages/arm_config
+[1.116s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/cmake/arm_configConfig.cmake
+[1.117s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/cmake/arm_configConfig-version.cmake
+[1.117s] -- Up-to-date symlink: /home/lukevizzini/arm_v3/arm_code/install/arm_config/share/arm_config/package.xml
+[1.121s] Invoked command in '/home/lukevizzini/arm_v3/arm_code/build/arm_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/arm_v3/arm_code/build/arm_config

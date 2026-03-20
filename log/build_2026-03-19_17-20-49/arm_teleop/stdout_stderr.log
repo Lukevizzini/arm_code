@@ -1,0 +1,44 @@
+running develop
+Removing /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm-teleop.egg-link (link to .)
+running egg_info
+writing ../../build/arm_teleop/arm_teleop.egg-info/PKG-INFO
+writing dependency_links to ../../build/arm_teleop/arm_teleop.egg-info/dependency_links.txt
+writing entry points to ../../build/arm_teleop/arm_teleop.egg-info/entry_points.txt
+writing requirements to ../../build/arm_teleop/arm_teleop.egg-info/requires.txt
+writing top-level names to ../../build/arm_teleop/arm_teleop.egg-info/top_level.txt
+reading manifest file '../../build/arm_teleop/arm_teleop.egg-info/SOURCES.txt'
+writing manifest file '../../build/arm_teleop/arm_teleop.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build
+creating /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib
+creating /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop
+copying arm_teleop/joy_to_trajectory.py -> /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop
+copying arm_teleop/__init__.py -> /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop
+copying arm_teleop/keyboard_servo.py -> /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop
+copying arm_teleop/keyboard_to_joy.py -> /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop
+copying arm_teleop/joy_to_servo.py -> /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop
+running install
+running install_lib
+creating /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop
+copying /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop/joy_to_trajectory.py -> /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop
+copying /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop/__init__.py -> /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop
+copying /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop/keyboard_servo.py -> /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop
+copying /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop/keyboard_to_joy.py -> /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop
+copying /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build/lib/arm_teleop/joy_to_servo.py -> /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop
+byte-compiling /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop/joy_to_trajectory.py to joy_to_trajectory.cpython-310.pyc
+byte-compiling /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop/keyboard_servo.py to keyboard_servo.cpython-310.pyc
+byte-compiling /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop/keyboard_to_joy.py to keyboard_to_joy.cpython-310.pyc
+byte-compiling /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop/joy_to_servo.py to joy_to_servo.cpython-310.pyc
+running install_data
+copying resource/arm_teleop -> /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/ament_index/resource_index/packages
+copying package.xml -> /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop
+running install_egg_info
+Copying ../../build/arm_teleop/arm_teleop.egg-info to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm_teleop-0.0.1-py3.10.egg-info
+running install_scripts
+Installing joy_to_servo script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+Installing joy_to_trajectory script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+Installing keyboard_servo script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+Installing keyboard_to_joy script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+writing list of installed files to '/home/lukevizzini/arm_v3/arm_code/build/arm_teleop/install.log'

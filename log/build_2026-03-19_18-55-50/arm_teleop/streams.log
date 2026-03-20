@@ -1,0 +1,21 @@
+[0.947s] Invoking command in '/home/lukevizzini/arm_v3/arm_code/build/arm_teleop': PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build --no-deps symlink_data
+[1.238s] running develop
+[1.390s] running egg_info
+[1.390s] writing arm_teleop.egg-info/PKG-INFO
+[1.390s] writing dependency_links to arm_teleop.egg-info/dependency_links.txt
+[1.391s] writing entry points to arm_teleop.egg-info/entry_points.txt
+[1.391s] writing requirements to arm_teleop.egg-info/requires.txt
+[1.391s] writing top-level names to arm_teleop.egg-info/top_level.txt
+[1.393s] reading manifest file 'arm_teleop.egg-info/SOURCES.txt'
+[1.395s] writing manifest file 'arm_teleop.egg-info/SOURCES.txt'
+[1.396s] running build_ext
+[1.397s] Creating /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages/arm-teleop.egg-link (link to .)
+[1.398s] Installing joy_to_servo script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+[1.398s] Installing joy_to_trajectory script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+[1.399s] Installing keyboard_ik script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+[1.399s] Installing keyboard_servo script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+[1.399s] Installing keyboard_to_joy script to /home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/arm_teleop
+[1.399s] 
+[1.400s] Installed /home/lukevizzini/arm_v3/arm_code/build/arm_teleop
+[1.400s] running symlink_data
+[1.435s] Invoked command in '/home/lukevizzini/arm_v3/arm_code/build/arm_teleop' returned '0': PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build --no-deps symlink_data

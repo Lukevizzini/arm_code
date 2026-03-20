@@ -35,6 +35,7 @@ def launch_setup(context, *args, **kwargs):
     controllers_file = LaunchConfiguration("controllers_file").perform(context)
     use_sim_time = LaunchConfiguration("use_sim_time")
     start_rviz = LaunchConfiguration("start_rviz")
+    start_rsp = LaunchConfiguration("start_robot_state_publisher")
 
     description_path = PathJoinSubstitution([FindPackageShare("arm_description"), "urdf", "four_dof_arm.urdf.xacro"])
 
@@ -56,6 +57,8 @@ def launch_setup(context, *args, **kwargs):
     joint_limits_yaml = _sanitize(_load_yaml("arm_config", "config/joint_limits.yaml"))
     moveit_controllers_yaml = _sanitize(_load_yaml("arm_config", "config/moveit_controllers.yaml"))
     initial_positions = _sanitize(_load_yaml("arm_config", "config/initial_positions.yaml"))
+    moveit_servo_yaml = _sanitize(_load_yaml("arm_config", "config/moveit_servo.yaml"))
+    servo_params = {"moveit_servo": moveit_servo_yaml}
 
     trajectory_execution = {
         "moveit_manage_controllers": False,
@@ -71,12 +74,31 @@ def launch_setup(context, *args, **kwargs):
         "publish_transforms_updates": True,
     }
 
-    nodes = [
+    nodes = []
+
+    if start_rsp.perform(context).lower() == "true":
+        nodes.append(
+            Node(
+                package="robot_state_publisher",
+                executable="robot_state_publisher",
+                output="both",
+                parameters=[robot_description],
+            )
+        )
+
+    nodes += [
         Node(
-            package="robot_state_publisher",
-            executable="robot_state_publisher",
-            output="both",
-            parameters=[robot_description],
+            package="moveit_servo",
+            executable="servo_node_main",
+            name="servo_server",
+            output="screen",
+            parameters=[
+                servo_params,
+                robot_description,
+                robot_description_semantic,
+                kinematics_yaml,
+                {"use_sim_time": use_sim_time},
+            ],
         ),
         Node(
             package="moveit_ros_move_group",
@@ -123,6 +145,11 @@ def generate_launch_description():
                 description="Controller configuration shared with ros2_control",
             ),
             DeclareLaunchArgument("use_sim_time", default_value="false", description="Use simulation clock if true"),
+            DeclareLaunchArgument(
+                "start_robot_state_publisher",
+                default_value="true",
+                description="Set false when ros2_control.launch.py is already running its own RSP",
+            ),
             DeclareLaunchArgument("start_rviz", default_value="true", description="Start RViz2 alongside move_group"),
             OpaqueFunction(function=launch_setup),
         ]

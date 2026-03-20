@@ -1,0 +1,196 @@
+[0.187s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'arm_teleop']
+[0.187s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['arm_teleop'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7d459576a020>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7d4595769bd0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7d4595769bd0>>)
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.339s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/lukevizzini/arm_v3/arm_code'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'ignore_ament_install'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extensions ['colcon_pkg']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'colcon_pkg'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extensions ['colcon_meta']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'colcon_meta'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extensions ['ros']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'ros'
+[0.356s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bringup' with type 'ros.ament_cmake' and name 'arm_bringup'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'ignore'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'ignore_ament_install'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extensions ['colcon_pkg']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'colcon_pkg'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extensions ['colcon_meta']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'colcon_meta'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extensions ['ros']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'ros'
+[0.357s] DEBUG:colcon.colcon_core.package_identification:Package 'src/config' with type 'ros.ament_cmake' and name 'arm_config'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'colcon_meta'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['ros']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'ros'
+[0.357s] DEBUG:colcon.colcon_core.package_identification:Package 'src/description' with type 'ros.ament_cmake' and name 'arm_description'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'ignore'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'ignore_ament_install'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extensions ['colcon_pkg']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'colcon_pkg'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extensions ['colcon_meta']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'colcon_meta'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extensions ['ros']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'ros'
+[0.358s] DEBUG:colcon.colcon_core.package_identification:Package 'src/launch' with type 'ros.ament_cmake' and name 'arm_launch'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'ignore'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'ignore_ament_install'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extensions ['colcon_pkg']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'colcon_pkg'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extensions ['colcon_meta']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'colcon_meta'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extensions ['ros']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'ros'
+[0.359s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pwm_bridge' with type 'ros.ament_python' and name 'arm_pwm_bridge'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'ignore'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'ignore_ament_install'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extensions ['colcon_pkg']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'colcon_pkg'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extensions ['colcon_meta']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'colcon_meta'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extensions ['ros']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'ros'
+[0.360s] DEBUG:colcon.colcon_core.package_identification:Package 'src/teleop' with type 'ros.ament_python' and name 'arm_teleop'
+[0.360s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.360s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.360s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.360s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.360s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.391s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'arm_config' in 'src/config'
+[0.391s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'arm_pwm_bridge' in 'src/pwm_bridge'
+[0.391s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'arm_description' in 'src/description'
+[0.391s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'arm_bringup' in 'src/bringup'
+[0.391s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'arm_launch' in 'src/launch'
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.393s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/lukevizzini/arm_v3/arm_code/install
+[0.394s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/lukevizzini/arm_new_v2/arm_code/install
+[0.395s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 421 installed packages in /opt/ros/humble
+[0.397s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.441s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'arm_teleop' is in: /home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop, /home/lukevizzini/arm_v3/arm_code/install/arm_teleop
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding arm_teleop
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.442s] Level 5:colcon.colcon_core.verb:set package 'arm_teleop' build argument 'cmake_args' from command line to 'None'
+[0.442s] Level 5:colcon.colcon_core.verb:set package 'arm_teleop' build argument 'cmake_target' from command line to 'None'
+[0.442s] Level 5:colcon.colcon_core.verb:set package 'arm_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.442s] Level 5:colcon.colcon_core.verb:set package 'arm_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[0.442s] Level 5:colcon.colcon_core.verb:set package 'arm_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[0.442s] Level 5:colcon.colcon_core.verb:set package 'arm_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[0.442s] Level 5:colcon.colcon_core.verb:set package 'arm_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[0.442s] Level 5:colcon.colcon_core.verb:set package 'arm_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[0.442s] Level 5:colcon.colcon_core.verb:set package 'arm_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.442s] DEBUG:colcon.colcon_core.verb:Building package 'arm_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lukevizzini/arm_v3/arm_code/build/arm_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop', 'merge_install': False, 'path': '/home/lukevizzini/arm_v3/arm_code/src/teleop', 'symlink_install': False, 'test_result_base': None}
+[0.443s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.444s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.444s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/lukevizzini/arm_v3/arm_code/src/teleop' with build type 'ament_python'
+[0.444s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_teleop', 'ament_prefix_path')
+[0.447s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.448s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/hook/ament_prefix_path.ps1'
+[0.448s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/hook/ament_prefix_path.dsv'
+[0.449s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/hook/ament_prefix_path.sh'
+[0.449s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.449s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.718s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/lukevizzini/arm_v3/arm_code/src/teleop'
+[0.718s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.719s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[-1.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lukevizzini/arm_v3/arm_code/build/arm_teleop': PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build
+[-0.970s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lukevizzini/arm_v3/arm_code/build/arm_teleop' returned '0': PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build
+[-0.968s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lukevizzini/arm_v3/arm_code/src/teleop': PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arm_teleop build --build-base /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build install --record /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/install.log --single-version-externally-managed install_data --force
+[-0.702s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lukevizzini/arm_v3/arm_code/src/teleop' returned '0': PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arm_teleop build --build-base /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/build install --record /home/lukevizzini/arm_v3/arm_code/build/arm_teleop/install.log --single-version-externally-managed install_data --force
+[-0.700s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop' for CMake module files
+[-0.699s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop' for CMake config files
+[-0.699s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib'
+[-0.699s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/bin'
+[-0.699s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/pkgconfig/arm_teleop.pc'
+[-0.698s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/lib/python3.10/site-packages'
+[-0.698s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_teleop', 'pythonpath')
+[-0.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/hook/pythonpath.ps1'
+[-0.697s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/hook/pythonpath.dsv'
+[-0.697s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/hook/pythonpath.sh'
+[-0.696s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/bin'
+[-0.696s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_teleop)
+[-0.696s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/package.ps1'
+[-0.695s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/package.dsv'
+[-0.695s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/package.sh'
+[-0.694s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/package.bash'
+[-0.693s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/arm_teleop/package.zsh'
+[-0.693s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lukevizzini/arm_v3/arm_code/install/arm_teleop/share/colcon-core/packages/arm_teleop)
+[-0.692s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[-0.692s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[-0.692s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[-0.691s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[-0.646s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[-0.645s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[-0.645s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[-0.645s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[-0.644s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[-0.644s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[-0.644s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lukevizzini/arm_v3/arm_code/install/local_setup.ps1'
+[-0.642s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lukevizzini/arm_v3/arm_code/install/_local_setup_util_ps1.py'
+[-0.641s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lukevizzini/arm_v3/arm_code/install/setup.ps1'
+[-0.640s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lukevizzini/arm_v3/arm_code/install/local_setup.sh'
+[-0.639s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lukevizzini/arm_v3/arm_code/install/_local_setup_util_sh.py'
+[-0.639s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lukevizzini/arm_v3/arm_code/install/setup.sh'
+[-0.638s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lukevizzini/arm_v3/arm_code/install/local_setup.bash'
+[-0.637s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lukevizzini/arm_v3/arm_code/install/setup.bash'
+[-0.636s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lukevizzini/arm_v3/arm_code/install/local_setup.zsh'
+[-0.636s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lukevizzini/arm_v3/arm_code/install/setup.zsh'

@@ -30,10 +30,10 @@ arm_controller:
     constraints:
       goal_time: 0.75
       stopped_velocity_tolerance: 0.05
-      joint1: {trajectory: 0.15, goal: 0.10}
-      joint2: {trajectory: 0.15, goal: 0.10}
-      joint3: {trajectory: 0.20, goal: 0.12}
-      joint4: {trajectory: 0.20, goal: 0.12}
+      joint1: {trajectory: 0.15, goal: 0.25}
+      joint2: {trajectory: 0.15, goal: 0.25}
+      joint3: {trajectory: 0.20, goal: 0.25}
+      joint4: {trajectory: 0.20, goal: 0.25}
     state_publish_rate: 100.0
     action_monitor_rate: 30.0
 

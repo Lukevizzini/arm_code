@@ -4,19 +4,19 @@ robot_description_planning:
       has_velocity_limits: true
       max_velocity: 4.0
       has_acceleration_limits: true
-      max_acceleration: 25
+      max_acceleration: 25.0
     joint2:
       has_velocity_limits: true
       max_velocity: 4.0
       has_acceleration_limits: true
-      max_acceleration: 25
+      max_acceleration: 25.0
     joint3:
       has_velocity_limits: true
       max_velocity: 4.0
       has_acceleration_limits: true
-      max_acceleration: 25
+      max_acceleration: 25.0
     joint4:
       has_velocity_limits: true
       max_velocity: 4.0
       has_acceleration_limits: true
-      max_acceleration: 25
+      max_acceleration: 25.0

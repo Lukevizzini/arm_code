@@ -23,6 +23,8 @@ def generate_launch_description():
         executable="ros2_control_node",
         output="screen",
         parameters=[robot_description, controllers_file],
+        sigterm_timeout="2",
+        sigkill_timeout="5",
     )
 
     robot_state_publisher = Node(
@@ -30,6 +32,8 @@ def generate_launch_description():
         executable="robot_state_publisher",
         output="screen",
         parameters=[robot_description],
+        sigterm_timeout="2",
+        sigkill_timeout="5",
     )
 
     joint_state_broadcaster_spawner = Node(
@@ -37,6 +41,8 @@ def generate_launch_description():
         executable="spawner",
         arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
         output="screen",
+        sigterm_timeout="2",
+        sigkill_timeout="5",
     )
 
     arm_controller_spawner = Node(
@@ -44,6 +50,8 @@ def generate_launch_description():
         executable="spawner",
         arguments=["arm_controller", "--controller-manager", "/controller_manager", "--param-file", controllers_file],
         output="screen",
+        sigterm_timeout="2",
+        sigkill_timeout="5",
     )
 
     return LaunchDescription(

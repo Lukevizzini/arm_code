@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lukevizzini/arm_new/arm_code/src/description
+CMAKE_SOURCE_DIR = /home/lukevizzini/arm_v3/arm_code/src/description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lukevizzini/arm_new/arm_code/build/arm_description
+CMAKE_BINARY_DIR = /home/lukevizzini/arm_v3/arm_code/build/arm_description
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/lukevizzini/arm_new/arm_code/build/arm_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lukevizzini/arm_new/arm_code/src/description /home/lukevizzini/arm_new/arm_code/src/description /home/lukevizzini/arm_new/arm_code/build/arm_description /home/lukevizzini/arm_new/arm_code/build/arm_description /home/lukevizzini/arm_new/arm_code/build/arm_description/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lukevizzini/arm_v3/arm_code/build/arm_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lukevizzini/arm_v3/arm_code/src/description /home/lukevizzini/arm_v3/arm_code/src/description /home/lukevizzini/arm_v3/arm_code/build/arm_description /home/lukevizzini/arm_v3/arm_code/build/arm_description /home/lukevizzini/arm_v3/arm_code/build/arm_description/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

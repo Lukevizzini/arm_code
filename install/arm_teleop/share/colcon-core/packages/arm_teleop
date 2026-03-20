@@ -1,1 +1,1 @@
-builtin_interfaces:rclpy:sensor_msgs:trajectory_msgs
+builtin_interfaces:control_msgs:geometry_msgs:rclpy:sensor_msgs:trajectory_msgs

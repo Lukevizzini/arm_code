@@ -1,0 +1,24 @@
+[0.912s] Invoking command in '/home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge': PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/build --no-deps symlink_data --force
+[1.186s] running develop
+[1.370s] running egg_info
+[1.371s] writing arm_pwm_bridge.egg-info/PKG-INFO
+[1.371s] writing dependency_links to arm_pwm_bridge.egg-info/dependency_links.txt
+[1.371s] writing entry points to arm_pwm_bridge.egg-info/entry_points.txt
+[1.372s] writing requirements to arm_pwm_bridge.egg-info/requires.txt
+[1.372s] writing top-level names to arm_pwm_bridge.egg-info/top_level.txt
+[1.375s] reading manifest file 'arm_pwm_bridge.egg-info/SOURCES.txt'
+[1.376s] writing manifest file 'arm_pwm_bridge.egg-info/SOURCES.txt'
+[1.377s] running build_ext
+[1.377s] Creating /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages/arm-pwm-bridge.egg-link (link to .)
+[1.378s] Installing joint_traj_to_pwm script to /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/arm_pwm_bridge
+[1.378s] 
+[1.378s] Installed /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge
+[1.379s] running symlink_data
+[1.379s] symbolically linking /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/resource/arm_pwm_bridge -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/ament_index/resource_index/packages
+[1.379s] symbolically linking /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/package.xml -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge
+[1.380s] symbolically linking /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/README.md -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge
+[1.380s] symbolically linking /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/launch/apm_config.yaml -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+[1.380s] symbolically linking /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/launch/mavros.launch -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+[1.381s] symbolically linking /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/launch/apm_pluginlist.yaml -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+[1.381s] symbolically linking /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/launch/pwm_bridge.launch.py -> /home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+[1.411s] Invoked command in '/home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge' returned '0': PYTHONPATH=/home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/arm_v3/arm_code/build/arm_pwm_bridge/build --no-deps symlink_data --force
