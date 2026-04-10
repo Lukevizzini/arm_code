@@ -1,0 +1,17 @@
+[2.046s] Invoking command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge': PYTHONPATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge/build --no-deps symlink_data
+[2.569s] running develop
+[2.901s] running egg_info
+[2.901s] writing arm_pwm_bridge.egg-info/PKG-INFO
+[2.903s] writing dependency_links to arm_pwm_bridge.egg-info/dependency_links.txt
+[2.904s] writing entry points to arm_pwm_bridge.egg-info/entry_points.txt
+[2.904s] writing requirements to arm_pwm_bridge.egg-info/requires.txt
+[2.904s] writing top-level names to arm_pwm_bridge.egg-info/top_level.txt
+[2.908s] reading manifest file 'arm_pwm_bridge.egg-info/SOURCES.txt'
+[2.912s] writing manifest file 'arm_pwm_bridge.egg-info/SOURCES.txt'
+[2.918s] running build_ext
+[2.918s] Creating /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge/lib/python3.10/site-packages/arm-pwm-bridge.egg-link (link to .)
+[2.920s] Installing joint_traj_to_pwm script to /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge/lib/arm_pwm_bridge
+[2.920s] 
+[2.920s] Installed /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge
+[2.920s] running symlink_data
+[2.986s] Invoked command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge' returned '0': PYTHONPATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge/build --no-deps symlink_data

@@ -1,0 +1,3 @@
+[console_scripts]
+joint_traj_to_pwm = arm_pwm_bridge.joint_traj_to_pwm:main
+

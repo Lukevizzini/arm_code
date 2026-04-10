@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing arm_pwm_bridge.egg-info/PKG-INFO
+writing dependency_links to arm_pwm_bridge.egg-info/dependency_links.txt
+writing entry points to arm_pwm_bridge.egg-info/entry_points.txt
+writing requirements to arm_pwm_bridge.egg-info/requires.txt
+writing top-level names to arm_pwm_bridge.egg-info/top_level.txt
+reading manifest file 'arm_pwm_bridge.egg-info/SOURCES.txt'
+writing manifest file 'arm_pwm_bridge.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge/lib/python3.10/site-packages/arm-pwm-bridge.egg-link (link to .)
+Installing joint_traj_to_pwm script to /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge/lib/arm_pwm_bridge
+
+Installed /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge
+running symlink_data
+symbolically linking /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge/launch/mavros.launch -> /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+symbolically linking /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge/launch/apm_pluginlist.yaml -> /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge/share/arm_pwm_bridge/launch
+symbolically linking /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_pwm_bridge/launch/apm_config.yaml -> /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge/share/arm_pwm_bridge/launch

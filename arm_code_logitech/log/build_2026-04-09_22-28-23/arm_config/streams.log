@@ -1,0 +1,48 @@
+[0.025s] Invoking command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/src/config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config
+[0.318s] -- The C compiler identification is GNU 11.4.0
+[0.969s] -- The CXX compiler identification is GNU 11.4.0
+[1.370s] -- Detecting C compiler ABI info
+[1.536s] -- Detecting C compiler ABI info - done
+[1.543s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.543s] -- Detecting C compile features
+[1.544s] -- Detecting C compile features - done
+[1.548s] -- Detecting CXX compiler ABI info
+[1.717s] -- Detecting CXX compiler ABI info - done
+[1.722s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.722s] -- Detecting CXX compile features
+[1.723s] -- Detecting CXX compile features - done
+[1.732s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.875s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.941s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.058s] -- Configuring done
+[2.063s] -- Generating done
+[2.065s] -- Build files have been written to: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config
+[2.069s] Invoked command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/src/config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config
+[2.071s] Invoking command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config -- -j8 -l8
+[2.099s] Invoked command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake --build /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config -- -j8 -l8
+[2.106s] Invoking command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config
+[2.111s] -- Install configuration: ""
+[2.112s] -- Execute custom install script
+[2.114s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/config/four_dof_arm.srdf
+[2.122s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/config/initial_positions.yaml
+[2.129s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/config/joint_limits.yaml
+[2.136s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/config/kinematics.yaml
+[2.144s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/config/moveit_controllers.yaml
+[2.151s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/config/ompl_planning.yaml
+[2.158s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/config/ros2_controllers.yaml
+[2.165s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/ament_index/resource_index/package_run_dependencies/arm_config
+[2.172s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/ament_index/resource_index/parent_prefix_path/arm_config
+[2.181s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/environment/ament_prefix_path.sh
+[2.189s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/environment/ament_prefix_path.dsv
+[2.198s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/environment/path.sh
+[2.207s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/environment/path.dsv
+[2.218s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/local_setup.bash
+[2.225s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/local_setup.sh
+[2.232s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/local_setup.zsh
+[2.242s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/local_setup.dsv
+[2.252s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.dsv
+[2.261s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/ament_index/resource_index/packages/arm_config
+[2.269s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/cmake/arm_configConfig.cmake
+[2.276s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/cmake/arm_configConfig-version.cmake
+[2.283s] -- Symlinking: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.xml
+[2.292s] Invoked command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble /usr/bin/cmake --install /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config

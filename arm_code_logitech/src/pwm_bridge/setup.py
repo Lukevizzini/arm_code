@@ -9,7 +9,15 @@ setup(
     data_files=[
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
         ("share/" + package_name, ["package.xml", "README.md"]),
-        ("share/" + package_name + "/launch", ["launch/pwm_bridge.launch.py"]),
+        (
+            "share/" + package_name + "/launch",
+            [
+                "launch/pwm_bridge.launch.py",
+                "launch/mavros.launch",
+                "launch/apm_pluginlist.yaml",
+                "launch/apm_config.yaml",
+            ],
+        ),
     ],
     install_requires=["setuptools"],
     zip_safe=True,

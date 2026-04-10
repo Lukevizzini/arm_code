@@ -1,0 +1,258 @@
+[0.170s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'arm_config', 'arm_launch', '--symlink-install']
+[0.170s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['arm_config', 'arm_launch'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x799bccc6ad10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x799bccc6a8c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x799bccc6a8c0>>)
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.308s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'ignore'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'ignore_ament_install'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extensions ['colcon_pkg']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'colcon_pkg'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extensions ['colcon_meta']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'colcon_meta'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup) by extension 'ros'
+[0.321s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bringup' with type 'ros.ament_cmake' and name 'arm_bringup'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extensions ['ignore', 'ignore_ament_install']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'ignore'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'ignore_ament_install'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extensions ['colcon_pkg']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'colcon_pkg'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extensions ['colcon_meta']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'colcon_meta'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extensions ['ros']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/config) by extension 'ros'
+[0.322s] DEBUG:colcon.colcon_core.package_identification:Package 'src/config' with type 'ros.ament_cmake' and name 'arm_config'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['ignore', 'ignore_ament_install']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'ignore'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'ignore_ament_install'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['colcon_pkg']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'colcon_pkg'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['colcon_meta']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'colcon_meta'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['ros']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'ros'
+[0.322s] DEBUG:colcon.colcon_core.package_identification:Package 'src/description' with type 'ros.ament_cmake' and name 'arm_description'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'ignore'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'ignore_ament_install'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extensions ['colcon_pkg']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'colcon_pkg'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extensions ['colcon_meta']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'colcon_meta'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extensions ['ros']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch) by extension 'ros'
+[0.323s] DEBUG:colcon.colcon_core.package_identification:Package 'src/launch' with type 'ros.ament_cmake' and name 'arm_launch'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'ignore_ament_install'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extensions ['colcon_pkg']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'colcon_pkg'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extensions ['colcon_meta']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'colcon_meta'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extensions ['ros']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_bridge) by extension 'ros'
+[0.324s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pwm_bridge' with type 'ros.ament_python' and name 'arm_pwm_bridge'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'ignore_ament_install'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extensions ['colcon_pkg']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extensions ['colcon_meta']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'colcon_meta'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extensions ['ros']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop) by extension 'ros'
+[0.325s] DEBUG:colcon.colcon_core.package_identification:Package 'src/teleop' with type 'ros.ament_python' and name 'arm_teleop'
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.351s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'arm_pwm_bridge' in 'src/pwm_bridge'
+[0.351s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'arm_teleop' in 'src/teleop'
+[0.351s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'arm_description' in 'src/description'
+[0.351s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'arm_bringup' in 'src/bringup'
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.353s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install
+[0.354s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/lukevizzini/arm_v3/arm_code/install
+[0.355s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/lukevizzini/arm_new_v2/arm_code/install
+[0.356s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 421 installed packages in /opt/ros/humble
+[0.358s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.394s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'arm_config' is in: /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config, /home/lukevizzini/arm_v3/arm_code/install/arm_config, /home/lukevizzini/arm_new_v2/arm_code/install/arm_config
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding arm_config
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_config' build argument 'cmake_args' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_config' build argument 'cmake_target' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.395s] DEBUG:colcon.colcon_core.verb:Building package 'arm_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config', 'merge_install': False, 'path': '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/src/config', 'symlink_install': True, 'test_result_base': None}
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_launch' build argument 'cmake_args' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_launch' build argument 'cmake_target' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_launch' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_launch' build argument 'cmake_clean_cache' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_launch' build argument 'cmake_clean_first' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_launch' build argument 'cmake_force_configure' from command line to 'False'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_launch' build argument 'ament_cmake_args' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_launch' build argument 'catkin_cmake_args' from command line to 'None'
+[0.395s] Level 5:colcon.colcon_core.verb:set package 'arm_launch' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.396s] DEBUG:colcon.colcon_core.verb:Building package 'arm_launch' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_launch', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch', 'merge_install': False, 'path': '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/src/launch', 'symlink_install': True, 'test_result_base': None}
+[0.396s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.397s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.397s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/src/config' with build type 'ament_cmake'
+[0.397s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/src/config'
+[0.399s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.400s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.400s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config -- -j8 -l8
+[0.454s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config -- -j8 -l8
+[0.465s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config
+[0.505s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_config)
+[0.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_config
+[0.510s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config' for CMake module files
+[0.510s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config' for CMake config files
+[0.511s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_config', 'cmake_prefix_path')
+[0.511s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/hook/cmake_prefix_path.ps1'
+[0.512s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/hook/cmake_prefix_path.dsv'
+[0.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/hook/cmake_prefix_path.sh'
+[0.513s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/bin'
+[0.513s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/lib/pkgconfig/arm_config.pc'
+[0.514s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/lib/python3.10/site-packages'
+[0.514s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/bin'
+[0.514s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.ps1'
+[0.515s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.dsv'
+[0.515s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.sh'
+[0.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.bash'
+[0.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.zsh'
+[0.517s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/colcon-core/packages/arm_config)
+[0.518s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_config)
+[0.518s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config' for CMake module files
+[0.519s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config' for CMake config files
+[0.519s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_config', 'cmake_prefix_path')
+[0.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/hook/cmake_prefix_path.ps1'
+[0.520s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/hook/cmake_prefix_path.dsv'
+[0.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/hook/cmake_prefix_path.sh'
+[0.521s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/bin'
+[0.521s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/lib/pkgconfig/arm_config.pc'
+[0.521s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/lib/python3.10/site-packages'
+[0.521s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/bin'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.ps1'
+[0.522s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.dsv'
+[0.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.sh'
+[0.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.bash'
+[0.524s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/arm_config/package.zsh'
+[0.524s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config/share/colcon-core/packages/arm_config)
+[0.525s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/src/launch' with build type 'ament_cmake'
+[0.525s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/src/launch'
+[0.526s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.526s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.056s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_launch': AMENT_PREFIX_PATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_bringup:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_description:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config:/home/lukevizzini/arm_v3/arm_code/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_bringup:/home/lukevizzini/arm_v3/arm_code/install/arm_description:/home/lukevizzini/arm_v3/arm_code/install/arm_config:/home/lukevizzini/arm_new_v2/arm_code/install/arm_launch:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_bringup:/home/lukevizzini/arm_new_v2/arm_code/install/arm_description:/home/lukevizzini/arm_new_v2/arm_code/install/arm_config:/opt/ros/humble CMAKE_PREFIX_PATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_bringup:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_description:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_bringup:/home/lukevizzini/arm_v3/arm_code/install/arm_description:/home/lukevizzini/arm_v3/arm_code/install/arm_config:/home/lukevizzini/arm_new_v2/arm_code/install/arm_launch:/home/lukevizzini/arm_new_v2/arm_code/install/arm_bringup:/home/lukevizzini/arm_new_v2/arm_code/install/arm_description:/home/lukevizzini/arm_new_v2/arm_code/install/arm_config:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_launch -- -j8 -l8
+[1.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_launch' returned '0': AMENT_PREFIX_PATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_bringup:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_description:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config:/home/lukevizzini/arm_v3/arm_code/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_bringup:/home/lukevizzini/arm_v3/arm_code/install/arm_description:/home/lukevizzini/arm_v3/arm_code/install/arm_config:/home/lukevizzini/arm_new_v2/arm_code/install/arm_launch:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_bringup:/home/lukevizzini/arm_new_v2/arm_code/install/arm_description:/home/lukevizzini/arm_new_v2/arm_code/install/arm_config:/opt/ros/humble CMAKE_PREFIX_PATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_bringup:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_description:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_bringup:/home/lukevizzini/arm_v3/arm_code/install/arm_description:/home/lukevizzini/arm_v3/arm_code/install/arm_config:/home/lukevizzini/arm_new_v2/arm_code/install/arm_launch:/home/lukevizzini/arm_new_v2/arm_code/install/arm_bringup:/home/lukevizzini/arm_new_v2/arm_code/install/arm_description:/home/lukevizzini/arm_new_v2/arm_code/install/arm_config:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_launch -- -j8 -l8
+[1.086s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_launch': AMENT_PREFIX_PATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_bringup:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_description:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config:/home/lukevizzini/arm_v3/arm_code/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_bringup:/home/lukevizzini/arm_v3/arm_code/install/arm_description:/home/lukevizzini/arm_v3/arm_code/install/arm_config:/home/lukevizzini/arm_new_v2/arm_code/install/arm_launch:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_bringup:/home/lukevizzini/arm_new_v2/arm_code/install/arm_description:/home/lukevizzini/arm_new_v2/arm_code/install/arm_config:/opt/ros/humble CMAKE_PREFIX_PATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_bringup:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_description:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_bringup:/home/lukevizzini/arm_v3/arm_code/install/arm_description:/home/lukevizzini/arm_v3/arm_code/install/arm_config:/home/lukevizzini/arm_new_v2/arm_code/install/arm_launch:/home/lukevizzini/arm_new_v2/arm_code/install/arm_bringup:/home/lukevizzini/arm_new_v2/arm_code/install/arm_description:/home/lukevizzini/arm_new_v2/arm_code/install/arm_config:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_launch
+[1.123s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_launch)
+[1.124s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch' for CMake module files
+[1.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_launch' returned '0': AMENT_PREFIX_PATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_bringup:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_description:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config:/home/lukevizzini/arm_v3/arm_code/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_bringup:/home/lukevizzini/arm_v3/arm_code/install/arm_description:/home/lukevizzini/arm_v3/arm_code/install/arm_config:/home/lukevizzini/arm_new_v2/arm_code/install/arm_launch:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_bringup:/home/lukevizzini/arm_new_v2/arm_code/install/arm_description:/home/lukevizzini/arm_new_v2/arm_code/install/arm_config:/opt/ros/humble CMAKE_PREFIX_PATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_bringup:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_description:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_config:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_launch:/home/lukevizzini/arm_v3/arm_code/install/arm_bringup:/home/lukevizzini/arm_v3/arm_code/install/arm_description:/home/lukevizzini/arm_v3/arm_code/install/arm_config:/home/lukevizzini/arm_new_v2/arm_code/install/arm_launch:/home/lukevizzini/arm_new_v2/arm_code/install/arm_bringup:/home/lukevizzini/arm_new_v2/arm_code/install/arm_description:/home/lukevizzini/arm_new_v2/arm_code/install/arm_config:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_pwm_bridge:/home/lukevizzini/arm_v3/arm_code/install/arm_teleop:/home/lukevizzini/arm_v3/arm_code/install/arm_pwm_bridge:/home/lukevizzini/arm_new_v2/arm_code/install/arm_teleop:/home/lukevizzini/arm_new_v2/arm_code/install/arm_pwm_bridge:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_launch
+[1.125s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch' for CMake config files
+[1.125s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_launch', 'cmake_prefix_path')
+[1.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/hook/cmake_prefix_path.ps1'
+[1.126s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/hook/cmake_prefix_path.dsv'
+[1.127s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/hook/cmake_prefix_path.sh'
+[1.127s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/bin'
+[1.127s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/lib/pkgconfig/arm_launch.pc'
+[1.128s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/lib/python3.10/site-packages'
+[1.128s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/bin'
+[1.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.ps1'
+[1.129s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.dsv'
+[1.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.sh'
+[1.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.bash'
+[1.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.zsh'
+[1.130s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/colcon-core/packages/arm_launch)
+[1.131s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_launch)
+[1.131s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch' for CMake module files
+[1.131s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch' for CMake config files
+[1.132s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_launch', 'cmake_prefix_path')
+[1.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/hook/cmake_prefix_path.ps1'
+[1.132s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/hook/cmake_prefix_path.dsv'
+[1.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/hook/cmake_prefix_path.sh'
+[1.133s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/bin'
+[1.133s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/lib/pkgconfig/arm_launch.pc'
+[1.133s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/lib/python3.10/site-packages'
+[1.133s] Level 1:colcon.colcon_core.environment:checking '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/bin'
+[1.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.ps1'
+[1.134s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.dsv'
+[1.134s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.sh'
+[1.134s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.bash'
+[1.135s] INFO:colcon.colcon_core.shell:Creating package script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/arm_launch/package.zsh'
+[1.135s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_launch/share/colcon-core/packages/arm_launch)
+[1.135s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.136s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.136s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.137s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.184s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.185s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.185s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.185s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.186s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[1.186s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.186s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/local_setup.ps1'
+[1.187s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/_local_setup_util_ps1.py'
+[1.188s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/setup.ps1'
+[1.189s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/local_setup.sh'
+[1.190s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/_local_setup_util_sh.py'
+[1.190s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/setup.sh'
+[1.191s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/local_setup.bash'
+[1.192s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/setup.bash'
+[1.193s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/local_setup.zsh'
+[1.193s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/setup.zsh'

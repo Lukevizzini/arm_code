@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:macro name="ros2_control_block" params="controllers_file initial_positions_file">
-    <xacro:property name="initial_positions" value="${xacro.load_yaml(initial_positions_file)['arm']}"/>
+  <xacro:macro name="ros2_control_block" params="controllers_file">
     <ros2_control name="four_dof_arm_system" type="system">
       <hardware>
         <plugin>mock_components/GenericSystem</plugin>
@@ -9,30 +8,22 @@
       </hardware>
       <joint name="joint1">
         <command_interface name="position"/>
-        <state_interface name="position">
-          <param name="initial_value">${initial_positions['joint1']}</param>
-        </state_interface>
+        <state_interface name="position"/>
         <state_interface name="velocity"/>
       </joint>
       <joint name="joint2">
         <command_interface name="position"/>
-        <state_interface name="position">
-          <param name="initial_value">${initial_positions['joint2']}</param>
-        </state_interface>
+        <state_interface name="position"/>
         <state_interface name="velocity"/>
       </joint>
       <joint name="joint3">
         <command_interface name="position"/>
-        <state_interface name="position">
-          <param name="initial_value">${initial_positions['joint3']}</param>
-        </state_interface>
+        <state_interface name="position"/>
         <state_interface name="velocity"/>
       </joint>
       <joint name="joint4">
         <command_interface name="position"/>
-        <state_interface name="position">
-          <param name="initial_value">${initial_positions['joint4']}</param>
-        </state_interface>
+        <state_interface name="position"/>
         <state_interface name="velocity"/>
       </joint>
     </ros2_control>

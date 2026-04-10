@@ -19,7 +19,8 @@ class LogitechMappingConfig:
     z_limits: Tuple[float, float] = (-3.20, -0.20)
     left_stick_x_axis: int = 0
     left_stick_y_axis: int = 1
-    right_stick_joint3_axis: int = 3
+    right_stick_joint3_axis: int = 4
+    joint4_axis: int = 3
     joint4_right_button: int = 5
     joint4_left_button: int = 4
     gripper_open_axis: int = 2
@@ -27,6 +28,7 @@ class LogitechMappingConfig:
     left_stick_x_scale: float = 1.0
     left_stick_y_scale: float = 1.0
     right_stick_joint3_scale: float = -1.0
+    joint4_axis_scale: float = 1.0
     gripper_scale: float = -1.0
     trigger_released_value: float = 1.0
     trigger_pressed_value: float = -1.0
@@ -86,6 +88,7 @@ class LogitechInterpreter:
             self.config.right_stick_joint3_axis,
             self.config.right_stick_joint3_scale,
         )
+        joint4_axis = self._axis_value(axes, self.config.joint4_axis, self.config.joint4_axis_scale)
 
         self.current_y = clamp(
             self.current_y + (left_x * self.config.position_velocity_mps * dt),
@@ -99,14 +102,18 @@ class LogitechInterpreter:
         )
 
         joint3_command = joint3_axis * self.config.joint3_velocity_radps
-        joint4_command = (
-            self._button_value(buttons, self.config.joint4_right_button)
-            - self._button_value(buttons, self.config.joint4_left_button)
-        ) * self.config.joint4_velocity_radps
-        gripper_command = (
+        joint4_command = joint4_axis * self.config.joint4_velocity_radps
+
+        trigger_gripper = (
             self._trigger_value(axes, self.config.gripper_open_axis)
             - self._trigger_value(axes, self.config.gripper_close_axis)
-        ) * self.config.gripper_scale
+        )
+        bumper_gripper = (
+            self._button_value(buttons, self.config.joint4_right_button)
+            - self._button_value(buttons, self.config.joint4_left_button)
+        )
+        gripper_source = trigger_gripper if abs(trigger_gripper) > 0.0 else bumper_gripper
+        gripper_command = gripper_source * self.config.gripper_scale
 
         return LogitechCommandOutput(
             pose_x=self.config.fixed_x,

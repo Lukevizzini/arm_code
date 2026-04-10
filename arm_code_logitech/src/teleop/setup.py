@@ -20,6 +20,7 @@ setup(
     entry_points={
         "console_scripts": [
             "keyboard_to_joy = arm_teleop.keyboard_to_joy:main",
+            "event_to_joy = arm_teleop.event_to_joy:main",
             "joy_to_trajectory = arm_teleop.joy_to_trajectory:main",
             "logitech_to_ik = arm_teleop.logitech_to_ik:main",
             "logitech_ik_to_trajectory = arm_teleop.logitech_ik_to_trajectory:main",

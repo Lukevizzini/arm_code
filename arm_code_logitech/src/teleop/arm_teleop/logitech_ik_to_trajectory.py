@@ -26,6 +26,9 @@ class LogitechIKToTrajectory(Node):
 
         self.declare_parameter("publish_rate_hz", 15.0)
         self.declare_parameter("time_from_start", 0.12)
+        self.declare_parameter("joint12_max_step_rad", 0.08)
+        self.declare_parameter("joint34_max_step_rad", 0.08)
+        self.declare_parameter("command_deadband_rad", 0.01)
 
         self.declare_parameter("joint_names", ["joint1", "joint2", "joint3", "joint4"])
         self.declare_parameter("lower_limits", [-3.14, -2.5, -2.5, -3.14])
@@ -47,6 +50,9 @@ class LogitechIKToTrajectory(Node):
         self.publish_rate_hz = float(self.get_parameter("publish_rate_hz").value)
         self.dt = 1.0 / self.publish_rate_hz
         self.time_from_start = float(self.get_parameter("time_from_start").value)
+        self.joint12_max_step_rad = float(self.get_parameter("joint12_max_step_rad").value)
+        self.joint34_max_step_rad = float(self.get_parameter("joint34_max_step_rad").value)
+        self.command_deadband_rad = float(self.get_parameter("command_deadband_rad").value)
 
         self.joint_names: List[str] = list(self.get_parameter("joint_names").value)
         self.lower_limits: List[float] = [float(v) for v in list(self.get_parameter("lower_limits").value)]
@@ -65,7 +71,8 @@ class LogitechIKToTrajectory(Node):
         self.desired_joint3 = self.current_positions[2]
         self.desired_joint4 = self.current_positions[3]
         self.last_joint12 = [self.current_positions[0], self.current_positions[1]]
-        self.state_initialized = False
+        self.last_commanded_positions = list(self.current_positions)
+        self.state_initialized = True
         self.publisher = self.create_publisher(JointTrajectory, self.trajectory_topic, 10)
 
         self.create_subscription(PoseStamped, self.pose_topic, self._pose_cb, 10)
@@ -102,7 +109,7 @@ class LogitechIKToTrajectory(Node):
             self.state_initialized = True
 
     def _tick(self) -> None:
-        if not self.state_initialized or self.latest_pose is None:
+        if self.latest_pose is None:
             return
 
         self.desired_joint3 = clamp(
@@ -125,7 +132,13 @@ class LogitechIKToTrajectory(Node):
             # The operator's joint4 input becomes an offset around the leveled wrist.
             commanded_joint4 += self.gripper_level_joint2_scale * joint2
 
-        self._publish_target(joint1, joint2, self.desired_joint3, commanded_joint4)
+        target_positions = [
+            self._slew(self.last_commanded_positions[0], joint1, self.joint12_max_step_rad),
+            self._slew(self.last_commanded_positions[1], joint2, self.joint12_max_step_rad),
+            self._slew(self.last_commanded_positions[2], self.desired_joint3, self.joint34_max_step_rad),
+            self._slew(self.last_commanded_positions[3], commanded_joint4, self.joint34_max_step_rad),
+        ]
+        self._publish_target(*target_positions)
 
     def _solve_joint12(self, pose: PoseStamped) -> tuple[float, float]:
         # With the original arm convention, joint1 rotates about link1's axis and
@@ -158,16 +171,24 @@ class LogitechIKToTrajectory(Node):
         )
 
     def _publish_target(self, joint1: float, joint2: float, joint3: float, joint4: float) -> None:
-        trajectory = JointTrajectory()
-        trajectory.joint_names = list(self.joint_names)
-
-        point = JointTrajectoryPoint()
-        point.positions = [
+        next_positions = [
             clamp(joint1, self.lower_limits[0], self.upper_limits[0]),
             clamp(joint2, self.lower_limits[1], self.upper_limits[1]),
             clamp(joint3, self.lower_limits[2], self.upper_limits[2]),
             clamp(joint4, self.lower_limits[3], self.upper_limits[3]),
         ]
+
+        if all(
+            abs(target - current) < self.command_deadband_rad
+            for target, current in zip(next_positions, self.last_commanded_positions)
+        ):
+            return
+
+        trajectory = JointTrajectory()
+        trajectory.joint_names = list(self.joint_names)
+
+        point = JointTrajectoryPoint()
+        point.positions = next_positions
         point.time_from_start = Duration(
             sec=int(self.time_from_start),
             nanosec=int((self.time_from_start - int(self.time_from_start)) * 1e9),
@@ -175,6 +196,10 @@ class LogitechIKToTrajectory(Node):
 
         trajectory.points.append(point)
         self.publisher.publish(trajectory)
+        self.last_commanded_positions = list(next_positions)
+
+    def _slew(self, current: float, target: float, max_step: float) -> float:
+        return clamp(target, current - max_step, current + max_step)
 
 
 def main(args=None) -> None:

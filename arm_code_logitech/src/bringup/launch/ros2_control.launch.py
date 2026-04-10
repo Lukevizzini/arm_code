@@ -1,7 +1,7 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, RegisterEventHandler
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, RegisterEventHandler
 from launch.conditions import IfCondition
-from launch.event_handlers import OnProcessStart
+from launch.event_handlers import OnProcessExit
 from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
@@ -29,6 +29,8 @@ def generate_launch_description():
         executable="ros2_control_node",
         output="screen",
         parameters=[robot_description, controllers_file],
+        sigterm_timeout="2",
+        sigkill_timeout="5",
     )
 
     robot_state_publisher = Node(
@@ -37,20 +39,36 @@ def generate_launch_description():
         output="screen",
         parameters=[robot_description],
         condition=IfCondition(start_robot_state_publisher),
+        sigterm_timeout="2",
+        sigkill_timeout="5",
     )
 
-    joint_state_broadcaster_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+    joint_state_broadcaster_loader = ExecuteProcess(
         output="screen",
+        cmd=[
+            "ros2",
+            "control",
+            "load_controller",
+            "joint_state_broadcaster",
+            "--set-state",
+            "active",
+            "-c",
+            "/controller_manager",
+        ],
     )
 
-    arm_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["arm_controller", "--controller-manager", "/controller_manager", "--param-file", controllers_file],
+    arm_controller_loader = ExecuteProcess(
         output="screen",
+        cmd=[
+            "ros2",
+            "control",
+            "load_controller",
+            "arm_controller",
+            "--set-state",
+            "active",
+            "-c",
+            "/controller_manager",
+        ],
     )
 
     return LaunchDescription(
@@ -68,10 +86,11 @@ def generate_launch_description():
             ),
             control_node,
             robot_state_publisher,
+            joint_state_broadcaster_loader,
             RegisterEventHandler(
-                OnProcessStart(
-                    target_action=control_node,
-                    on_start=[joint_state_broadcaster_spawner, arm_controller_spawner],
+                OnProcessExit(
+                    target_action=joint_state_broadcaster_loader,
+                    on_exit=[arm_controller_loader],
                 )
             ),
         ]

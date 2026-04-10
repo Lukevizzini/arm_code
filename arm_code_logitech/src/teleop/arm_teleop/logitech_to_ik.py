@@ -46,7 +46,8 @@ class LogitechJoyToIK(Node):
 
         self.declare_parameter("left_stick_x_axis", 0)
         self.declare_parameter("left_stick_y_axis", 1)
-        self.declare_parameter("right_stick_joint3_axis", 3)
+        self.declare_parameter("right_stick_joint3_axis", 4)
+        self.declare_parameter("joint4_axis", 3)
         self.declare_parameter("joint4_right_button", 5)
         self.declare_parameter("joint4_left_button", 4)
         self.declare_parameter("gripper_open_axis", 2)
@@ -54,6 +55,7 @@ class LogitechJoyToIK(Node):
         self.declare_parameter("left_stick_x_scale", 1.0)
         self.declare_parameter("left_stick_y_scale", 1.0)
         self.declare_parameter("right_stick_joint3_scale", -1.0)
+        self.declare_parameter("joint4_axis_scale", 1.0)
         self.declare_parameter("gripper_scale", -1.0)
         self.declare_parameter("trigger_released_value", 1.0)
         self.declare_parameter("trigger_pressed_value", -1.0)
@@ -81,6 +83,7 @@ class LogitechJoyToIK(Node):
             left_stick_x_axis=int(self.get_parameter("left_stick_x_axis").value),
             left_stick_y_axis=int(self.get_parameter("left_stick_y_axis").value),
             right_stick_joint3_axis=int(self.get_parameter("right_stick_joint3_axis").value),
+            joint4_axis=int(self.get_parameter("joint4_axis").value),
             joint4_right_button=int(self.get_parameter("joint4_right_button").value),
             joint4_left_button=int(self.get_parameter("joint4_left_button").value),
             gripper_open_axis=int(self.get_parameter("gripper_open_axis").value),
@@ -88,6 +91,7 @@ class LogitechJoyToIK(Node):
             left_stick_x_scale=float(self.get_parameter("left_stick_x_scale").value),
             left_stick_y_scale=float(self.get_parameter("left_stick_y_scale").value),
             right_stick_joint3_scale=float(self.get_parameter("right_stick_joint3_scale").value),
+            joint4_axis_scale=float(self.get_parameter("joint4_axis_scale").value),
             gripper_scale=float(self.get_parameter("gripper_scale").value),
             trigger_released_value=float(self.get_parameter("trigger_released_value").value),
             trigger_pressed_value=float(self.get_parameter("trigger_pressed_value").value),
@@ -107,9 +111,9 @@ class LogitechJoyToIK(Node):
 
         self.get_logger().info(
             "Logitech joystick teleop active: left stick -> IK y/z target, "
-            f"right stick axis {config.right_stick_joint3_axis} -> joint3 command, "
-            f"RB/LB buttons {config.joint4_right_button}/{config.joint4_left_button} -> joint4, "
-            f"trigger axes {config.gripper_open_axis}/{config.gripper_close_axis} -> gripper."
+            f"right stick vertical axis {config.right_stick_joint3_axis} -> joint3 command, "
+            f"right stick horizontal axis {config.joint4_axis} -> joint4, "
+            f"trigger axes {config.gripper_open_axis}/{config.gripper_close_axis} or RB/LB {config.joint4_right_button}/{config.joint4_left_button} -> gripper."
         )
 
     def _joy_cb(self, msg: Joy) -> None:
