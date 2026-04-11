@@ -1,4 +1,5 @@
 import ast
+from typing import Optional
 from typing import Dict, List, Sequence
 
 import rclpy
@@ -35,9 +36,9 @@ class JointTrajectoryToPWM(Node):
         self.declare_parameter("joint_names", "['joint1','joint2','joint3','joint4']")
         self.declare_parameter("rc_channels", "[12,13,14,15]")
         self.declare_parameter("rc_override_topic", "/mavros/rc/override")
-        self.declare_parameter("pulse_min_us", 1000.0)
-        self.declare_parameter("pulse_max_us", 2000.0)
-        self.declare_parameter("angle_min_rad", "[-2.6,-2.0,-2.6,-2.6]")
+        self.declare_parameter("pulse_min_us", 700.0)
+        self.declare_parameter("pulse_max_us", 2300.0)
+        self.declare_parameter("angle_min_rad", "[-2.6,-2.6,-2.6,-2.6]")
         self.declare_parameter("angle_max_rad", "[2.6,2.6,2.6,2.6]")
         self.declare_parameter("initial_positions_rad", "[0.0,0.0,0.0,0.0]")
 
@@ -45,8 +46,11 @@ class JointTrajectoryToPWM(Node):
         self.declare_parameter("gripper_channel", 16)
         self.declare_parameter("gripper_command_min", -1.0)
         self.declare_parameter("gripper_command_max", 1.0)
-        self.declare_parameter("gripper_pulse_min_us", 1000.0)
-        self.declare_parameter("gripper_pulse_max_us", 2000.0)
+        self.declare_parameter("gripper_pulse_min_us", 900.0)
+        self.declare_parameter("gripper_pulse_max_us", 2100.0)
+        self.declare_parameter("gripper_command_is_rate", True)
+        self.declare_parameter("gripper_rate_pwm_per_sec", 200.0)
+        self.declare_parameter("initial_gripper_pwm_us", 1500.0)
 
         self.trajectory_topic: str = str(self.get_parameter("trajectory_topic").value)
         self.joint_names: List[str] = parse_sequence_parameter(
@@ -84,6 +88,9 @@ class JointTrajectoryToPWM(Node):
         self.gripper_command_max: float = float(self.get_parameter("gripper_command_max").value)
         self.gripper_pulse_min_us: float = float(self.get_parameter("gripper_pulse_min_us").value)
         self.gripper_pulse_max_us: float = float(self.get_parameter("gripper_pulse_max_us").value)
+        self.gripper_command_is_rate: bool = bool(self.get_parameter("gripper_command_is_rate").value)
+        self.gripper_rate_pwm_per_sec: float = float(self.get_parameter("gripper_rate_pwm_per_sec").value)
+        self.initial_gripper_pwm_us: float = float(self.get_parameter("initial_gripper_pwm_us").value)
 
         if self.pulse_min_us > self.pulse_max_us:
             self.get_logger().warn(
@@ -123,11 +130,17 @@ class JointTrajectoryToPWM(Node):
         self._invalid_limit_indices_logged = set()
         self._rc_subscriber_warned = False
         self._rc_subscriber_connected = False
+        self._last_gripper_command_time: Optional[float] = None
 
         self._last_positions: Dict[str, float] = {
             name: self.initial_positions_rad[i] if i < len(self.initial_positions_rad) else 0.0
             for i, name in enumerate(self.joint_names)
         }
+        self._current_gripper_pwm_us = clamp(
+            self.initial_gripper_pwm_us,
+            min(self.gripper_pulse_min_us, self.gripper_pulse_max_us),
+            max(self.gripper_pulse_min_us, self.gripper_pulse_max_us),
+        )
 
         self.create_subscription(JointTrajectory, self.trajectory_topic, self._traj_cb, 10)
         if self.gripper_channel > 0:
@@ -142,6 +155,10 @@ class JointTrajectoryToPWM(Node):
             self.get_logger().info(
                 f"Listening on {self.gripper_topic} -> RC channel {self.gripper_channel}"
             )
+            if self.gripper_command_is_rate:
+                self.get_logger().info(
+                    "Gripper commands are interpreted as a rate; zero input holds the last PWM value."
+                )
 
         self._write_positions(self._last_positions)
 
@@ -178,7 +195,10 @@ class JointTrajectoryToPWM(Node):
             min(self.gripper_command_min, self.gripper_command_max),
             max(self.gripper_command_min, self.gripper_command_max),
         )
-        pulse = self._gripper_to_pwm(command)
+        if self.gripper_command_is_rate:
+            pulse = self._gripper_rate_to_pwm(command)
+        else:
+            pulse = self._gripper_to_pwm(command)
         self._set_rc_channel(self.gripper_channel, pulse)
         self.rc_pub.publish(self.rc_msg)
 
@@ -214,6 +234,25 @@ class JointTrajectoryToPWM(Node):
             max(self.gripper_pulse_min_us, self.gripper_pulse_max_us),
         )
 
+    def _gripper_rate_to_pwm(self, command: float) -> float:
+        now_sec = self.get_clock().now().nanoseconds / 1.0e9
+        lower = min(self.gripper_pulse_min_us, self.gripper_pulse_max_us)
+        upper = max(self.gripper_pulse_min_us, self.gripper_pulse_max_us)
+
+        if self._last_gripper_command_time is None:
+            self._last_gripper_command_time = now_sec
+            return self._current_gripper_pwm_us
+
+        dt = max(0.0, now_sec - self._last_gripper_command_time)
+        self._last_gripper_command_time = now_sec
+
+        self._current_gripper_pwm_us = clamp(
+            self._current_gripper_pwm_us + (command * self.gripper_rate_pwm_per_sec * dt),
+            lower,
+            upper,
+        )
+        return self._current_gripper_pwm_us
+
     def _set_rc_channel(self, channel: int, pulse_us: float):
         index = channel - 1
         if 0 <= index < 18:
@@ -226,6 +265,9 @@ class JointTrajectoryToPWM(Node):
 
             pulse = self._angle_to_pwm(i, positions[joint])
             self._set_rc_channel(self.rc_channels[i], pulse)
+
+        if self.gripper_channel > 0:
+            self._set_rc_channel(self.gripper_channel, self._current_gripper_pwm_us)
 
         self.rc_pub.publish(self.rc_msg)
         self.get_logger().info("Initial RC override positions applied")

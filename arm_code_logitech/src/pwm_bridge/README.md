@@ -54,6 +54,9 @@ ros2 launch arm_pwm_bridge pwm_bridge.launch.py \
 - `pulse_min_us` / `pulse_max_us` (float): microsecond range sent to servos.
 - `gripper_command_min` / `gripper_command_max` (float): input range expected on the gripper topic.
 - `gripper_pulse_min_us` / `gripper_pulse_max_us` (float): pulse range for the gripper output.
+- `gripper_command_is_rate` (bool): when `true`, gripper input is treated as a rate command and `0` holds the current PWM.
+- `gripper_rate_pwm_per_sec` (float): change speed in microseconds per second when rate mode is enabled.
+- `initial_gripper_pwm_us` (float): startup PWM for the gripper in rate mode.
 - `initial_positions_rad` (float list): optional starting setpoint.
 - `initial_gripper_command` (float): gripper setpoint applied on startup.
 - `command_service` (string): MAVROS command service (default `/mavros/cmd/command`).
@@ -64,6 +67,7 @@ ros2 launch arm_pwm_bridge pwm_bridge.launch.py \
 Notes:
 - This bridge suits the simple `joy_to_trajectory` path. It does not implement FollowJointTrajectory actions (used by MoveIt); add a full ros2_control hardware interface if you need that.
 - Each command is sent through MAVROS as `MAV_CMD_DO_SET_SERVO` with `param1=channel`, `param2=pulse_us`. Adjust ranges to your servo geometry before use.
+- With the default `gripper_command_is_rate:=true`, inputs like `1`, `0`, `-1` behave as open, hold, and close rates. This lets the gripper start at `1500`, move toward values like `1700`, and hold there when the trigger is released.
 - For shared IK/hardware bringup, use `ros2 launch arm_launch hardware_logitech_ik.launch.py`.
 - If one servo needs reversed pulse direction, set `pulse_min_us_per_joint` and `pulse_max_us_per_joint` with that joint's values swapped instead of changing the URDF joint sign.
 - The default hardware mapping is arm joints on channels `9-12` and the gripper on channel `13`.

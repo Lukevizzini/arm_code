@@ -10,8 +10,8 @@ from sensor_msgs.msg import Joy
 
 
 KEY_BINDINGS = {
-    "a": ("axis", 0, -1.0),  # left stick left
-    "d": ("axis", 0, 1.0),   # left stick right
+    "a": ("axis", 0, 1.0),  # left stick left
+    "d": ("axis", 0, -1.0),   # left stick right
     "w": ("axis", 1, 1.0),   # left stick up
     "s": ("axis", 1, -1.0),  # left stick down
     "j": ("axis", 3, -1.0),  # right stick left

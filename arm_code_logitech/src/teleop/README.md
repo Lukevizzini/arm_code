@@ -2,6 +2,13 @@
 
 Teleop helpers for the 4-DOF arm. The package includes a keyboard-to-joy shim for joint-space testing and a Logitech gamepad mapper that publishes an end-effector IK target plus direct joint/gripper commands from `/joy`.
 
+sudo chmod a+r /dev/input/event0
+
+ros2 launch arm_launch sim_logitech_teleop.launch.py use_event_device:=true event_device:=/dev/input/event0
+
+ros2 launch arm_launch hardware_logitech_ik.launch.py use_event_device:=true event_device:=/dev/input/event0
+
+
 ## Key mappings
 - `w/s`: left stick up/down (joint2)
 - `a/d`: left stick left/right (joint1)
