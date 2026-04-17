@@ -1,0 +1,21 @@
+[2.566s] Invoking command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_teleop': PYTHONPATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_teleop/build --no-deps symlink_data
+[3.014s] running develop
+[3.263s] running egg_info
+[3.263s] writing arm_teleop.egg-info/PKG-INFO
+[3.264s] writing dependency_links to arm_teleop.egg-info/dependency_links.txt
+[3.264s] writing entry points to arm_teleop.egg-info/entry_points.txt
+[3.264s] writing requirements to arm_teleop.egg-info/requires.txt
+[3.264s] writing top-level names to arm_teleop.egg-info/top_level.txt
+[3.266s] reading manifest file 'arm_teleop.egg-info/SOURCES.txt'
+[3.268s] writing manifest file 'arm_teleop.egg-info/SOURCES.txt'
+[3.271s] running build_ext
+[3.271s] Creating /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop/lib/python3.10/site-packages/arm-teleop.egg-link (link to .)
+[3.273s] Installing event_to_joy script to /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop/lib/arm_teleop
+[3.273s] Installing joy_to_trajectory script to /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop/lib/arm_teleop
+[3.274s] Installing keyboard_to_joy script to /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop/lib/arm_teleop
+[3.275s] Installing logitech_ik_to_trajectory script to /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop/lib/arm_teleop
+[3.275s] Installing logitech_to_ik script to /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop/lib/arm_teleop
+[3.276s] 
+[3.276s] Installed /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_teleop
+[3.276s] running symlink_data
+[3.328s] Invoked command in '/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_teleop' returned '0': PYTHONPATH=/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/install/arm_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/lukevizzini/logitech_arm_code/arm_code/arm_code_logitech/build/arm_teleop/build --no-deps symlink_data

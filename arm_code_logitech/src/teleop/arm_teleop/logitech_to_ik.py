@@ -55,10 +55,10 @@ class LogitechJoyToIK(Node):
         self.declare_parameter("left_stick_x_scale", 1.0)
         self.declare_parameter("left_stick_y_scale", 1.0)
         self.declare_parameter("right_stick_joint3_scale", -1.0)
-        self.declare_parameter("joint4_axis_scale", 1.0)
+        self.declare_parameter("joint4_axis_scale", -1.0)
         self.declare_parameter("gripper_scale", -1.0)
-        self.declare_parameter("trigger_released_value", 1.0)
-        self.declare_parameter("trigger_pressed_value", -1.0)
+        self.declare_parameter("trigger_released_value", -1.0)
+        self.declare_parameter("trigger_pressed_value", 1.0)
 
         joy_topic = str(self.get_parameter("joy_topic").value)
         pose_topic = str(self.get_parameter("pose_topic").value)
